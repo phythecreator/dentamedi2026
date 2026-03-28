@@ -21,14 +21,11 @@
             content: ''; display: block; width: 50px; height: 3px; background: #0066aa; margin: 15px auto;
         }
 
-        /* Chatbot Style */
         #chatWindow { display: none; }
         .chat-open { display: flex !important; }
         
-        /* Mobile Improvements */
         @media (max-width: 640px) {
             .hero h1 { font-size: 2.8rem; line-height: 1.1; }
-            .logo-img { height: 60px !important; }
         }
     </style>
 </head>
@@ -36,9 +33,9 @@
 
     <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <img src="imagem_2026-03-28_224051293.png" alt="Dentamedi" class="logo-img h-16 md:h-20 w-auto">
-            <div class="hidden md:flex gap-6 font-semibold text-sm">
-                <a href="#sobre" class="hover:text-[#0066aa]">Sobre</a>
+            <img src="imagem_2026-03-28_224051293.png" alt="Dentamedi" class="h-16 md:h-20 w-auto">
+            <div class="hidden md:flex gap-6 font-semibold text-sm items-center">
+                <a href="#tratamentos" class="hover:text-[#0066aa]">Tratamentos</a>
                 <a href="#acordos" class="hover:text-[#0066aa]">Acordos</a>
                 <a href="#avaliacoes" class="hover:text-[#0066aa]">Avaliações</a>
                 <a href="#contactos" class="bg-[#0066aa] text-white px-5 py-2 rounded-full">Marcar Consulta</a>
@@ -46,41 +43,55 @@
         </div>
     </nav>
 
-    <section class="hero h-[80vh] flex items-center justify-center text-center text-white px-6">
+    <section class="hero h-[75vh] flex items-center justify-center text-center text-white px-6">
         <div>
-            <h1 class="text-5xl md:text-8xl font-bold drop-shadow-2xl mb-8">
+            <h1 class="text-5xl md:text-8xl font-bold drop-shadow-2xl">
                 O seu sorriso.<br>A nossa missão.
             </h1>
-            <a href="#contactos" class="bg-white text-[#0066aa] px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-transform inline-block">
-                Marcar agora
-            </a>
+            <div class="mt-10">
+                <a href="#contactos" class="bg-white text-[#0066aa] px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-transform inline-block">
+                    Marcar agora
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="sobre" class="py-20 max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center section-title">Excelência Oral</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div class="p-6 border rounded-2xl hover:border-[#0066aa] transition-colors">
-                <i class="fa-solid fa-tooth text-3xl text-[#0066aa] mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Implantologia</h3>
-                <p class="text-zinc-500 text-sm">Recupere a funcionalidade e estética do seu sorriso com implantes de alta qualidade.</p>
+    <section id="tratamentos" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center section-title">Nossos Tratamentos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+            <div>
+                <h3 class="font-bold text-[#0066aa] text-xl mb-6 border-l-4 border-[#0066aa] pl-3">Prevenção e Geral</h3>
+                <ul class="space-y-3 text-zinc-600">
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Check-up e Diagnóstico</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Destartarização (Limpeza)</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Dentisteria (Cáries)</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Odontopediatria</li>
+                </ul>
             </div>
-            <div class="p-6 border rounded-2xl hover:border-[#0066aa] transition-colors">
-                <i class="fa-solid fa-align-center text-3xl text-[#0066aa] mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Ortodontia</h3>
-                <p class="text-zinc-500 text-sm">Aparelhos fixos e invisíveis para o alinhamento perfeito dos seus dentes.</p>
+            <div>
+                <h3 class="font-bold text-[#0066aa] text-xl mb-6 border-l-4 border-[#0066aa] pl-3">Reabilitação e Estética</h3>
+                <ul class="space-y-3 text-zinc-600">
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Implantologia</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Próteses Fixas e Removíveis</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Branqueamento Dental</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Facetas e Estética Oral</li>
+                </ul>
             </div>
-            <div class="p-6 border rounded-2xl hover:border-[#0066aa] transition-colors">
-                <i class="fa-solid fa-wand-magic-sparkles text-3xl text-[#0066aa] mb-4"></i>
-                <h3 class="font-bold text-xl mb-2">Estética Avançada</h3>
-                <p class="text-zinc-500 text-sm">Branqueamentos e facetas para um sorriso radiante e natural.</p>
+            <div>
+                <h3 class="font-bold text-[#0066aa] text-xl mb-6 border-l-4 border-[#0066aa] pl-3">Especialidades</h3>
+                <ul class="space-y-3 text-zinc-600">
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Ortodontia (Aparelhos)</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Endodontia (Desvitalização)</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Cirurgia Oral Avançada</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Periodontologia</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="acordos" class="bg-zinc-50 py-16">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold section-title mb-12">Nossos Acordos</h2>
+            <h2 class="text-3xl font-bold section-title mb-12">Os nossos acordos</h2>
             <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
                 <img src="MÉDIS.png" class="h-16 md:h-20 grayscale hover:grayscale-0 transition-all">
                 <img src="imagem_2026-03-28_224333470.png" class="h-16 md:h-20 grayscale hover:grayscale-0 transition-all">
@@ -102,102 +113,115 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Equipa fantástica e muito profissional. Recomendo vivamente a clínica de Vila Real."</p>
-                    <p class="mt-4 font-bold text-xs">— Ana Rita Martins</p>
+                    <p class="text-sm italic">"Equipa fantástica em Vila Real. Fui atendida para uma urgência e foram impecáveis."</p>
+                    <p class="mt-4 font-bold text-xs">— Ana Rita Martins (Vila Real)</p>
                 </div>
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Muito atenciosos com as crianças. O meu filho adorou a consulta."</p>
-                    <p class="mt-4 font-bold text-xs">— João Pedro Silva</p>
+                    <p class="text-sm italic">"A melhor clínica de Sabrosa. Simpatia e muita competência do Dr. e das assistentes."</p>
+                    <p class="mt-4 font-bold text-xs">— João Pedro Silva (Sabrosa)</p>
                 </div>
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Instalações modernas e higienização impecável. Senti-me muito seguro."</p>
-                    <p class="mt-4 font-bold text-xs">— Maria Fernandes</p>
+                    <p class="text-sm italic">"Fiz o meu tratamento de implantes na clínica de Vila Real e o resultado superou as expetativas."</p>
+                    <p class="mt-4 font-bold text-xs">— Carlos Teixeira (Vila Real)</p>
                 </div>
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Fiz um implante e correu tudo na perfeição. Sem dor e resultado excelente."</p>
-                    <p class="mt-4 font-bold text-xs">— Carlos Teixeira</p>
+                    <p class="text-sm italic">"Excelente para quem tem medo de dentista. Em Sabrosa tive uma experiência sem dor!"</p>
+                    <p class="mt-4 font-bold text-xs">— Sofia Guedes (Sabrosa)</p>
                 </div>
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Melhor clínica de Sabrosa. Simpatia e competência num só lugar."</p>
-                    <p class="mt-4 font-bold text-xs">— Sofia Guedes</p>
+                    <p class="text-sm italic">"Consultas de rotina rápidas e eficazes. Vila Real e Sabrosa mantêm o mesmo nível."</p>
+                    <p class="mt-4 font-bold text-xs">— Pedro Santos (Misto)</p>
                 </div>
                 <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Sempre disponíveis para urgências. Resolveram o meu problema no próprio dia."</p>
-                    <p class="mt-4 font-bold text-xs">— Pedro Santos</p>
+                    <p class="text-sm italic">"Muito atenciosos com crianças. Recomendo a odontopediatria em Vila Real."</p>
+                    <p class="mt-4 font-bold text-xs">— Beatriz Fonseca (Vila Real)</p>
                 </div>
-                <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100 md:col-span-2 lg:col-span-1">
+                <div class="p-6 bg-zinc-50 rounded-2xl shadow-sm border border-zinc-100 lg:col-span-1 md:col-span-2">
                     <div class="flex text-amber-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="text-sm italic">"Transparência total nos orçamentos e facilidade com os acordos de saúde."</p>
-                    <p class="mt-4 font-bold text-xs">— Beatriz Fonseca</p>
+                    <p class="text-sm italic">"Serviço profissional e orçamentos transparentes. Senti-me seguro em Sabrosa."</p>
+                    <p class="mt-4 font-bold text-xs">— Maria Fernandes (Sabrosa)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contactos" class="py-20 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
-        <div>
-            <h2 class="text-3xl font-bold mb-6">Fale Connosco</h2>
-            <div class="space-y-4 mb-8">
-                <p><i class="fa-solid fa-phone text-[#0066aa] mr-2"></i> Vila Real: 259 348 915</p>
-                <p><i class="fa-solid fa-phone text-[#0066aa] mr-2"></i> Sabrosa: 259 939 702</p>
-                <p><i class="fa-solid fa-envelope text-[#0066aa] mr-2"></i> dentamedi@gmail.com</p>
+    <section id="contactos" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center section-title mb-12">Fale Connosco</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div class="space-y-4">
+                <div class="bg-zinc-50 p-6 rounded-3xl border">
+                    <h3 class="font-bold text-xl text-[#0066aa] mb-2"><i class="fa-solid fa-location-dot mr-2"></i> Vila Real</h3>
+                    <p class="text-sm text-zinc-600 mb-4">Avenida da Noruega, 314 • Tel: 259 348 915</p>
+                    <div class="rounded-2xl overflow-hidden h-48 border">
+                        <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps?q=Avenida+da+Noruega,+314,+5000-508+Vila+Real&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
-            
-            <form action="https://formspree.io/f/xvggleld" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="O seu nome" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa]">
-                <input type="email" name="email" placeholder="O seu email" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa]">
-                
-                <select name="tratamento" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa] bg-white text-zinc-500">
-                    <option value="" disabled selected>Selecione o tratamento pretendido</option>
-                    <option value="Medicina Dentária Geral">Medicina Dentária Geral</option>
-                    <option value="Implantologia">Implantologia</option>
-                    <option value="Ortodontia">Ortodontia (Aparelhos)</option>
-                    <option value="Branqueamento / Estética">Branqueamento / Estética</option>
-                    <option value="Check-up / Limpeza">Check-up / Limpeza</option>
-                    <option value="Outro">Outro</option>
-                </select>
-
-                <textarea name="message" placeholder="Mensagem / Dúvida" rows="3" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa] resize-none"></textarea>
-                <button type="submit" class="w-full bg-[#0066aa] text-white py-4 rounded-xl font-bold hover:bg-[#004477] transition-all">Contactar-nos</button>
-            </form>
+            <div class="space-y-4">
+                <div class="bg-zinc-50 p-6 rounded-3xl border">
+                    <h3 class="font-bold text-xl text-[#0066aa] mb-2"><i class="fa-solid fa-location-dot mr-2"></i> Sabrosa</h3>
+                    <p class="text-sm text-zinc-600 mb-4">R. de Trás 1 • Tel: 259 939 702</p>
+                    <div class="rounded-2xl overflow-hidden h-48 border">
+                        <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps?q=R.+de+Tr%C3%A1s+1,+5060-326+Sabrosa&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="space-y-6">
-            <div class="rounded-3xl overflow-hidden shadow-lg h-64 border">
-                <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.5678!2d-7.7423!3d41.2945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a26e44b8b69%3A0x2f1b4a000000000!2sAv.%20da%20Noruega%2C%20314%2C%205000-508%20Vila%20Real!5e0!3m2!1spt!2spt!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <p class="text-sm font-semibold text-center text-zinc-500">Vila Real: Avenida da Noruega, 314</p>
+        <div class="max-w-2xl mx-auto bg-white p-8 md:p-10 rounded-3xl border border-zinc-200 shadow-lg">
+            <form action="https://formspree.io/f/xvggleld" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="O seu nome" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa]">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="email" name="email" placeholder="O seu email" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa]">
+                    <input type="tel" name="phone" placeholder="O seu telefone" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa]">
+                </div>
+                
+                <select name="tratamento" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa] bg-white text-zinc-500">
+                    <option value="" disabled selected>Tratamento pretendido</option>
+                    <option value="Geral">Medicina Dentária Geral</option>
+                    <option value="Implantologia">Implantologia</option>
+                    <option value="Ortodontia">Ortodontia</option>
+                    <option value="Estética">Estética / Branqueamento</option>
+                    <option value="Limpeza">Check-up e Limpeza</option>
+                </select>
+
+                <textarea name="message" placeholder="Como podemos ajudar?" rows="3" required class="w-full p-4 border rounded-xl outline-none focus:border-[#0066aa] resize-none"></textarea>
+                <button type="submit" class="w-full bg-[#0066aa] text-white py-4 rounded-xl font-bold hover:bg-[#004477] transition-all">Contactar-nos</button>
+            </form>
         </div>
     </section>
 
     <footer class="bg-zinc-900 text-white py-12 text-center">
         <div class="flex justify-center gap-8 mb-8 text-3xl">
-            <a href="https://www.facebook.com/dentamedi/?locale=gn_PY" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/clinica_dentamedi/" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/dentamedi/?locale=gn_PY" target="_blank" class="hover:text-blue-500"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/clinica_dentamedi/" target="_blank" class="hover:text-pink-500"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <p class="text-zinc-500 text-sm">© 2026 Dentamedi | Vila Real & Sabrosa. Todos os direitos reservados.</p>
+        <p class="text-zinc-500 text-sm">dentamedi@gmail.com • Vila Real & Sabrosa</p>
+        <p class="text-zinc-500 text-xs mt-2">© 2026 Dentamedi. Todos os direitos reservados.</p>
     </footer>
 
     <div onclick="toggleChat()" class="fixed bottom-6 right-6 bg-[#0066aa] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl cursor-pointer z-[1000] hover:scale-110 transition-transform">
         <i class="fa-solid fa-comment-dots"></i>
     </div>
 
-    <div id="chatWindow" class="fixed bottom-24 right-6 w-[320px] max-w-[90%] h-[450px] bg-white rounded-3xl shadow-2xl z-[1001] flex-direction flex-col overflow-hidden border">
+    <div id="chatWindow" class="fixed bottom-24 right-6 w-[320px] max-w-[90%] h-[450px] bg-white rounded-3xl shadow-2xl z-[1001] flex-col overflow-hidden border">
         <div class="bg-[#0066aa] p-4 text-white flex justify-between items-center">
-            <span class="font-bold">Assistente Dentamedi</span>
+            <span class="font-bold">Chat Dentamedi</span>
             <i onclick="toggleChat()" class="fa-solid fa-xmark cursor-pointer"></i>
         </div>
         <div id="chatContent" class="flex-1 p-4 overflow-y-auto space-y-3 bg-zinc-50 text-sm">
-            <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm">Olá! Sou o assistente da Dentamedi. Como posso ajudar?<br><br><b>Pergunte-me sobre:</b><br>• Localização<br>• Contactos<br>• Acordos</div>
+            <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm">Olá! Sou o assistente Dentamedi. Pergunte sobre horários, localizações ou acordos!</div>
         </div>
         <div class="p-3 border-t bg-white flex gap-2">
-            <input id="chatInput" type="text" placeholder="Escreva aqui..." class="flex-1 p-2 bg-zinc-100 rounded-lg outline-none text-sm">
-            <button onclick="sendChat()" class="bg-[#0066aa] text-white p-2 rounded-lg px-4"><i class="fa-solid fa-paper-plane"></i></button>
+            <input id="chatInput" type="text" placeholder="Escreva..." class="flex-1 p-2 bg-zinc-100 rounded-lg outline-none text-sm">
+            <button onclick="sendChat()" class="bg-[#0066aa] text-white p-2 rounded-lg"><i class="fa-solid fa-paper-plane px-2"></i></button>
         </div>
     </div>
 
@@ -210,25 +234,20 @@
             const input = document.getElementById('chatInput');
             const content = document.getElementById('chatContent');
             const text = input.value.trim().toLowerCase();
-            
             if(!text) return;
 
-            // Mensagem do User
-            content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none shadow-sm ml-auto w-fit max-w-[80%]">${input.value}</div>`;
+            content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[80%]">${input.value}</div>`;
             
-            let reply = "Pedimos desculpa, mas não entendi. Ligue-nos para 259 348 915 ou deixe mensagem no formulário!";
+            let reply = "Lamentamos, não entendi. Ligue-nos para 259 348 915 para ajudarmos rapidamente!";
 
-            if(text.includes("local") || text.includes("morada") || text.includes("onde")) {
+            if(text.includes("local") || text.includes("onde") || text.includes("morada")) {
                 reply = "<b>Vila Real:</b> Av. da Noruega, 314.<br><b>Sabrosa:</b> R. de Trás 1.";
-            } else if(text.includes("contacto") || text.includes("telefone") || text.includes("ligar")) {
-                reply = "Pode ligar para 259 348 915 (Vila Real) ou 259 939 702 (Sabrosa).";
+            } else if(text.includes("contacto") || text.includes("telefone")) {
+                reply = "Vila Real: 259 348 915<br>Sabrosa: 259 939 702";
             } else if(text.includes("acordo") || text.includes("seguro")) {
-                reply = "Temos acordos com Médis, AdvanceCare, Wells, SAD-GNR, Montepio, SAMS e 15% desc. no INATEL!";
-            } else if(text.includes("preço") || text.includes("valor")) {
-                reply = "Os valores variam consoante o tratamento e os seus acordos. Recomendamos uma consulta de diagnóstico.";
+                reply = "Temos Médis, AdvanceCare, Wells, SAD-GNR, Montepio e SAMS. No INATEL tem 15% de desconto!";
             }
 
-            // Resposta AI
             setTimeout(() => {
                 content.innerHTML += `<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm w-fit max-w-[85%]">${reply}</div>`;
                 content.scrollTop = content.scrollHeight;
@@ -238,10 +257,7 @@
             content.scrollTop = content.scrollHeight;
         }
 
-        // Permitir Enter no chat
-        document.getElementById('chatInput').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') sendChat();
-        });
+        document.getElementById('chatInput').addEventListener('keypress', (e) => { if(e.key === 'Enter') sendChat(); });
     </script>
 </body>
 </html>
