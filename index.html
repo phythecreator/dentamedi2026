@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentamedi • Clínica Dentária Vila Real & Sabrosa</title>
+    <meta name="description" content="Clínica Dentamedi - Mais de 19 anos de experiência em implantes, estética dentária e reabilitação oral em Vila Real e Sabrosa.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        
+        .hero {
+            background: linear-gradient(rgba(0,102,170,0.75), rgba(0,102,170,0.75)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .section-title {
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #0066aa;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .chatbot-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 65px;
+            height: 65px;
+            background: #0066aa;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 10px 25px rgba(0,102,170,0.4);
+            z-index: 1000;
+            cursor: pointer;
+        }
+        
+        .chat-window {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 340px;
+            height: 480px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1001;
+        }
+        
+        .carousel {
+            scroll-behavior: smooth;
+        }
+        
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#0066aa] rounded-2xl flex items-center justify-center text-3xl text-white">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h1 class="text-3xl font-semibold text-[#0066aa]">Dentamedi</h1>
+            </div>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="#sobre" class="hover:text-[#0066aa]">Sobre nós</a>
+                <a href="#servicos" class="hover:text-[#0066aa]">Serviços</a>
+                <a href="#avaliacoes" class="hover:text-[#0066aa]">Avaliações</a>
+                <a href="#contactos" class="hover:text-[#0066aa]">Contactos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+                O seu sorriso.<br>A nossa missão.
+            </h1>
+            <p class="text-xl md:text-2xl max-w-xl mx-auto opacity-90">
+                Mais de 19 anos a devolver sorrisos em Vila Real e Sabrosa com excelência, tecnologia e cuidado personalizado.
+            </p>
+            <div class="mt-10">
+                <a href="#contactos" class="inline-block bg-white text-[#0066aa] hover:bg-amber-300 px-10 py-4 rounded-3xl font-medium text-lg">
+                    Falar connosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A DENTAMEDI -->
+    <section id="sobre" class="max-w-5xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-semibold mb-6">A Dentamedi</h2>
+                <p class="text-zinc-600 leading-relaxed text-lg">
+                    Clínica dentária com mais de 19 anos de experiência, presente em Vila Real e Sabrosa. 
+                    Especializamo-nos em reabilitações orais completas, implantes e estética dentária com tecnologia de ponta.
+                </p>
+                <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-4xl font-semibold text-[#0066aa]">19+</div>
+                        <p class="text-xs uppercase tracking-widest">Anos de experiência</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-[#0066aa]">2500+</div>
+                        <p class="text-xs uppercase tracking-widest">Implantes colocados</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-[#0066aa]">4.98</div>
+                        <p class="text-xs uppercase tracking-widest">Avaliação Google</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-sm">
+                <img src="https://picsum.photos/id/201/800/600" alt="Clínica Dentamedi interior" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS (nova secção detalhada) -->
+    <section id="servicos" class="bg-zinc-100 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-10 section-title">Os nossos serviços</h2>
+            
+            <div class="space-y-16">
+                <!-- 1. Medicina Dentária Geral e Preventiva -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6 flex items-center gap-3">
+                        <span class="text-[#0066aa]">1.</span> Medicina Dentária Geral e Preventiva
+                    </h3>
+                    <p class="text-zinc-600 mb-6">Este é o "básico" que todos os pacientes procuram:</p>
+                    <ul class="grid md:grid-cols-3 gap-4 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Check-up e Diagnóstico: Consultas de rotina para avaliação</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Destartarização (Limpeza): Higiene oral profissional</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Dentisteria: Restauração de cáries e dentes partidos</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Reabilitação e Estética Oral -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6 flex items-center gap-3">
+                        <span class="text-[#0066aa]">2.</span> Reabilitação e Estética Oral
+                    </h3>
+                    <p class="text-zinc-600 mb-6">Tratamentos para recuperar o sorriso:</p>
+                    <ul class="grid md:grid-cols-3 gap-4 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Implantologia: Colocação de implantes dentários para substituir dentes perdidos</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Prótese Dentária: Próteses fixas (coroas e pontes) ou removíveis</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Branqueamento Dentário: Tratamentos para tornar os dentes mais brancos</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Facetas Dentárias: Para corrigir imperfeições na forma ou cor dos dentes</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Especialidades Avançadas -->
+                <div>
+                    <h3 class="text-xl font-medium mb-6 flex items-center gap-3">
+                        <span class="text-[#0066aa]">3.</span> Especialidades Avançadas
+                    </h3>
+                    <ul class="grid md:grid-cols-3 gap-4 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Ortodontia: Aparelhos dentários (fixos ou invisíveis) para alinhar os dentes</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Endodontia: Tratamento de canais (desvitalização)</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Odontopediatria: Medicina dentária especializada para crianças</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#0066aa] mt-1"></i> Cirurgia Oral: Extrações (incluindo dentes do siso)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES GOOGLE -->
+    <section id="avaliacoes" class="py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-10 section-title">O que dizem os nossos pacientes</h2>
+            
+            <div id="reviewCarousel" class="carousel flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8">
+                <div class="min-w-[340px] bg-white p-8 rounded-3xl shadow-sm snap-center">
+                    <div class="text-amber-400 text-3xl mb-4">★★★★★</div>
+                    <p class="italic">"Excelentes profissionais. Gostei muito!"</p>
+                    <div class="mt-6 text-sm font-medium">Paula Cardoso • há 7 meses</div>
+                </div>
+                <div class="min-w-[340px] bg-white p-8 rounded-3xl shadow-sm snap-center">
+                    <div class="text-amber-400 text-3xl mb-4">★★★★★</div>
+                    <p class="italic">"Tudo 5* Muito profissionais e ótimo atendimento"</p>
+                    <div class="mt-6 text-sm font-medium">Tomas Duarte • há 4 meses</div>
+                </div>
+                <div class="min-w-[340px] bg-white p-8 rounded-3xl shadow-sm snap-center">
+                    <div class="text-amber-400 text-3xl mb-4">★★★★★</div>
+                    <p class="italic">"Excelente atendimento e profissionalismo. Recomendo vivamente."</p>
+                    <div class="mt-6 text-sm font-medium">Inês Pereira • há 2 anos</div>
+                </div>
+                <div class="min-w-[340px] bg-white p-8 rounded-3xl shadow-sm snap-center">
+                    <div class="text-amber-400 text-3xl mb-4">★★★★★</div>
+                    <p class="italic">"Clínica de gente séria, médicos de excelência"</p>
+                    <div class="mt-6 text-sm font-medium">Jorge Nóbrega • há 7 meses</div>
+                </div>
+                <div class="min-w-[340px] bg-white p-8 rounded-3xl shadow-sm snap-center">
+                    <div class="text-amber-400 text-3xl mb-4">★★★★★</div>
+                    <p class="italic">"Gostei muito do atendimento! Muito atenciosos!"</p>
+                    <div class="mt-6 text-sm font-medium">Gonçalo Faria • há 2 anos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTOS + MAPAS (endereços atualizados) -->
+    <section id="contactos" class="max-w-5xl mx-auto px-6 py-16 bg-zinc-100">
+        <h2 class="text-3xl font-semibold text-center mb-10 section-title">Contactos e Localização</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Vila Real -->
+            <div class="bg-white rounded-3xl p-8">
+                <h3 class="font-semibold text-xl mb-4">Vila Real – Sede</h3>
+                <a href="tel:259348915" class="text-4xl font-medium text-[#0066aa] block mb-1">259 348 915</a>
+                <p class="text-zinc-600">Avenida da Noruega, 314<br>5000-508 Vila Real</p>
+                <div class="mt-8 rounded-2xl overflow-hidden">
+                    <iframe width="100%" height="260" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.5!2d-7.789!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24f9b0e0e0e0e0%3A0x0!2sAv.%20da%20Noruega%2C%20Torre%20Sul%2C%20N%C2%BA%20314%2C%205000-508%20Vila%20Real!5e0!3m2!1spt-PT!2spt!4v1740000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <!-- Sabrosa -->
+            <div class="bg-white rounded-3xl p-8">
+                <h3 class="font-semibold text-xl mb-4">Sabrosa</h3>
+                <a href="tel:259939702" class="text-4xl font-medium text-[#0066aa] block mb-1">259 939 702</a>
+                <p class="text-zinc-600">Rua do Loreto, n.º 19<br>5060-328 Sabrosa</p>
+                <div class="mt-8 rounded-2xl overflow-hidden">
+                    <iframe width="100%" height="260" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980!2d-7.55!3d41.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%20Tr%C3%A1s%20da%20C%C3%A2mara%2C%20N%C2%BA%201%2C%205060-316%20Sabrosa!5e0!3m2!1spt-PT!2spt!4v1740000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTACTO -->
+    <section class="max-w-2xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-semibold text-center mb-8">Entre em contacto connosco</h2>
+        
+        <form action="https://formsubmit.co/dentamedi@gmail.com" method="POST" class="space-y-6 bg-white p-8 rounded-3xl shadow-sm">
+            <input type="text" name="nome" placeholder="Nome completo" required class="w-full px-6 py-4 border border-zinc-200 rounded-2xl focus:outline-none focus:border-[#0066aa]">
+            <div class="grid grid-cols-2 gap-4">
+                <input type="tel" name="telefone" placeholder="Telemóvel" required class="px-6 py-4 border border-zinc-200 rounded-2xl focus:outline-none focus:border-[#0066aa]">
+                <input type="email" name="email" placeholder="Email" class="px-6 py-4 border border-zinc-200 rounded-2xl focus:outline-none focus:border-[#0066aa]">
+            </div>
+            <textarea name="mensagem" rows="5" placeholder="Escreva a sua mensagem ou dúvida..." required class="w-full px-6 py-4 border border-zinc-200 rounded-3xl focus:outline-none focus:border-[#0066aa]"></textarea>
+            
+            <input type="hidden" name="_subject" value="Mensagem do site Dentamedi">
+            <input type="hidden" name="_next" value="https://dentamedi.pt/obrigado.html">
+            
+            <button type="submit" class="w-full bg-[#0066aa] hover:bg-[#005588] text-white py-5 text-lg font-medium rounded-3xl transition-colors">
+                ENVIAR MENSAGEM
+            </button>
+        </form>
+    </section>
+
+    <!-- CHATBOT -->
+    <div onclick="toggleChat()" class="chatbot-button">
+        <i class="fa-solid fa-comments"></i>
+    </div>
+
+    <div id="chatWindow" class="chat-window">
+        <div class="chat-header flex items-center justify-between bg-[#0066aa] text-white p-4">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-tooth"></i>
+                <span>Suporte Dentamedi</span>
+            </div>
+            <i onclick="toggleChat()" class="fa-solid fa-xmark text-xl cursor-pointer"></i>
+        </div>
+        
+        <div id="chatMessages" class="chat-messages p-4 flex-1 overflow-y-auto">
+            <div class="message bot">Olá! Como posso ajudar? Pode perguntar sobre tratamentos, horários, marcações ou localização.</div>
+        </div>
+        
+        <div class="p-4 border-t flex gap-2">
+            <input id="chatInput" type="text" placeholder="Escreva a sua pergunta..." 
+                   class="flex-1 border border-zinc-200 rounded-3xl px-5 py-3 focus:outline-none text-sm"
+                   onkeypress="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()" class="bg-[#0066aa] text-white px-6 rounded-3xl">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t py-8 text-center text-sm text-zinc-500">
+        © 2026 Clínica Dentamedi • Vila Real &amp; Sabrosa
+    </footer>
+
+    <script>
+        // Carousel das avaliações
+        function startCarousel() {
+            const carousel = document.getElementById('reviewCarousel')
+            let position = 0
+            const width = 356
+            setInterval(() => {
+                position += width
+                if (position >= carousel.scrollWidth) position = 0
+                carousel.scrollTo({ left: position, behavior: 'smooth' })
+            }, 4200)
+        }
+
+        // Chatbot simples
+        const responses = {
+            "horario": "Segunda a sexta: 09:00 - 19:00 | Sábado: 09:00 - 13:00",
+            "horários": "Segunda a sexta: 09:00 - 19:00 | Sábado: 09:00 - 13:00",
+            "implante": "Sim, fazemos implantes All-on-4 com dentes fixos no mesmo dia.",
+            "all-on-4": "Sim, fazemos implantes All-on-4 com dentes fixos no mesmo dia.",
+            "localização": "Vila Real: Avenida da Noruega, 314 | Sabrosa: Rua do Loreto, n.º 19",
+            "onde": "Vila Real: Avenida da Noruega, 314 | Sabrosa: Rua do Loreto, n.º 19",
+            "marcação": "Pode marcar através do formulário ou ligando para 259 348 915 (Vila Real) ou 259 939 702 (Sabrosa).",
+            "preço": "Os valores variam conforme o tratamento. Marque uma consulta para um orçamento personalizado.",
+            "precos": "Os valores variam conforme o tratamento. Marque uma consulta para um orçamento personalizado."
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput')
+            const text = input.value.trim().toLowerCase()
+            if (!text) return
+            
+            const chat = document.getElementById('chatMessages')
+            chat.innerHTML += `<div class="message ml-auto bg-[#0066aa] text-white rounded-3xl rounded-br-none px-5 py-3 max-w-[80%]">${input.value}</div>`
+            chat.scrollTop = chat.scrollHeight
+            input.value = ''
+            
+            setTimeout(() => {
+                let reply = "Desculpe, não entendi. Pode perguntar sobre horários, implantes, localização ou marcações?"
+                for (let key in responses) {
+                    if (text.includes(key)) {
+                        reply = responses[key]
+                        break
+                    }
+                }
+                chat.innerHTML += `<div class="message bg-zinc-100 rounded-3xl rounded-bl-none px-5 py-3 max-w-[80%]">${reply}</div>`
+                chat.scrollTop = chat.scrollHeight
+            }, 700)
+        }
+
+        function toggleChat() {
+            const win = document.getElementById('chatWindow')
+            win.style.display = win.style.display === 'flex' ? 'none' : 'flex'
+        }
+
+        window.onload = startCarousel
+    </script>
+</body>
+</html>
