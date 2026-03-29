@@ -26,9 +26,6 @@
         
         .logo-hover:hover { transform: scale(1.1); transition: all 0.3s ease; }
         .treatment-card:hover { border-color: #0066aa; transform: translateY(-5px); transition: all 0.3s ease; }
-        
-        /* Ajuste para o Instagram não mostrar detalhes extras */
-        .instagram-wrapper iframe { border-radius: 20px !important; border: none !important; box-shadow: none !important; }
     </style>
 </head>
 <body class="bg-white text-zinc-800">
@@ -46,9 +43,9 @@
         </div>
     </nav>
 
-    <section class="hero h-[75vh] flex items-center justify-center text-center text-white px-6">
+    <section class="hero h-[85vh] flex items-center justify-center text-center text-white px-6">
         <div class="max-w-5xl">
-            <h1 class="text-5xl md:text-8xl font-extrabold drop-shadow-2xl tracking-tight uppercase">
+            <h1 class="text-5xl md:text-9xl font-extrabold drop-shadow-2xl tracking-tight">
                 O seu sorriso.<br>A nossa missão.
             </h1>
             <div class="mt-12">
@@ -59,7 +56,7 @@
         </div>
     </section>
 
-    <section id="tratamentos" class="py-20 max-w-7xl mx-auto px-6">
+    <section id="tratamentos" class="py-24 max-w-7xl mx-auto px-6">
         <h2 class="text-4xl font-black text-center section-title uppercase">Especialidades</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div class="treatment-card bg-zinc-50 p-10 rounded-[40px] border-2 border-transparent shadow-sm">
@@ -83,7 +80,7 @@
                 </ul>
             </div>
             <div class="treatment-card bg-zinc-50 p-10 rounded-[40px] border-2 border-transparent shadow-sm">
-                <div class="w-14 h-14 bg-blue-100 text-[#0066aa] rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-sparkles"></i></div>
+                <div class="w-14 h-14 bg-blue-100 text-[#0066aa] rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-gem"></i></div>
                 <h3 class="font-bold text-2xl mb-4 text-[#0066aa]">Estética</h3>
                 <ul class="space-y-3 text-zinc-600 text-sm font-semibold">
                     <li>• Alinhadores Invisíveis</li>
@@ -152,33 +149,54 @@
     </section>
 
     <section id="contactos" class="py-24 max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-black text-center section-title mb-16 uppercase">Onde Estamos</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div class="bg-zinc-50 p-8 rounded-[40px] border">
+        <h2 class="text-4xl font-black text-center section-title mb-16 uppercase">Contactos e Localizações</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div class="bg-zinc-50 p-8 rounded-[40px] border shadow-md">
                 <h3 class="font-black text-2xl text-[#0066aa] mb-2 uppercase">Vila Real</h3>
                 <p class="text-zinc-600 mb-4">Avenida da Noruega, 314</p>
                 <a href="tel:259348915" class="text-2xl font-black hover:text-[#0066aa]">259 348 915</a>
-                <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.32!2d-7.74!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a24f0!2sAv.%20da%20Noruega%20314%2C%20Vila%20Real!5e0!3m2!1spt!2spt!4v1" allowfullscreen=""></iframe>
+                <div class="h-72 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-inner">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.5!2d-7.74!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24eb0000000000%3A0x0!2zQXZlbmlkYSBkYSBOb3J1ZWdhIDMxNCwgVmlsYSBSZWFs!5e0!3m2!1spt!2spt!4v1" allowfullscreen=""></iframe>
                 </div>
             </div>
-            <div class="bg-zinc-50 p-8 rounded-[40px] border">
+            <div class="bg-zinc-50 p-8 rounded-[40px] border shadow-md">
                 <h3 class="font-black text-2xl text-[#0066aa] mb-2 uppercase">Sabrosa</h3>
                 <p class="text-zinc-600 mb-4">Rua de Trás, 1</p>
                 <a href="tel:259939702" class="text-2xl font-black hover:text-[#0066aa]">259 939 702</a>
-                <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.5!2d-7.577!3d41.265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4f6!2sR.%20de%20Tr%C3%A1s%201%2C%205060-327%20Sabrosa!5e0!3m2!1spt!2spt!4v1" allowfullscreen=""></iframe>
+                <div class="h-72 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-inner">
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.8!2d-7.5778!3d41.2655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd249219e5d48a31%3A0x868b667e4368940!2sR.%20de%20Tr%C3%A1s%201%2C%205060-333%20Sabrosa!5e0!3m2!1spt!2spt!4v1" allowfullscreen=""></iframe>
                 </div>
             </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white p-10 md:p-16 rounded-[50px] border-2 border-zinc-100 shadow-2xl">
+            <h3 class="text-3xl font-black text-center mb-10 uppercase">Fale Connosco</h3>
+            <form action="https://formspree.io/f/xvggleld" method="POST" class="space-y-5">
+                <input type="text" name="name" placeholder="Nome Completo" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <input type="email" name="email" placeholder="E-mail" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all">
+                    <input type="tel" name="phone" placeholder="Telemóvel" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all">
+                </div>
+                <select name="tratamento" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white text-zinc-500 font-bold">
+                    <option value="" disabled selected>O que procura?</option>
+                    <option value="Consulta Geral">Medicina Dentária Geral</option>
+                    <option value="Implantes">Implantes / Reabilitação</option>
+                    <option value="Aparelho">Ortodontia / Aparelho</option>
+                    <option value="Branqueamento">Branqueamento / Estética</option>
+                    <option value="Urgência">Urgência</option>
+                </select>
+                <textarea name="message" placeholder="A sua mensagem..." rows="4" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white resize-none transition-all"></textarea>
+                <button type="submit" class="w-full bg-[#0066aa] text-white py-6 rounded-2xl font-black text-xl hover:bg-[#004477] shadow-xl transition-all uppercase tracking-widest">Enviar Pedido de Consulta</button>
+            </form>
         </div>
     </section>
 
     <section class="py-20 border-t bg-zinc-50">
         <div class="max-w-md mx-auto px-6 text-center">
             <p class="font-bold text-zinc-400 uppercase tracking-widest text-xs mb-8">Siga-nos no Instagram</p>
-            <div class="instagram-wrapper rounded-[40px] overflow-hidden shadow-2xl bg-white p-2">
-                <blockquote class="instagram-media" data-instgrm-captioned="false" data-instgrm-permalink="https://www.instagram.com/p/DWWdlIpCDY9/" data-instgrm-version="14" style="width:100%; border:0; margin:0; padding:0;"></blockquote>
-                <script async src="//www.instagram.com/embed.js"></script>
+            <div class="rounded-[40px] overflow-hidden shadow-2xl bg-white p-2">
+                <iframe src="https://www.instagram.com/p/DWWdlIpCDY9/embed/captioned" width="100%" height="550" frameborder="0" scrolling="no" allowtransparency="true" class="rounded-[30px] block" style="border:none; overflow:hidden;"></iframe>
             </div>
         </div>
     </section>
@@ -194,37 +212,59 @@
     <div onclick="toggleChat()" class="fixed bottom-6 right-6 bg-[#0066aa] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl cursor-pointer z-[1000] hover:scale-110 transition-all">
         <i class="fa-solid fa-comment-dots"></i>
     </div>
-    <div id="chatWindow" class="fixed bottom-24 right-6 w-[350px] max-w-[90vw] h-[500px] bg-white rounded-[30px] shadow-2xl z-[1001] flex-col overflow-hidden border">
-        <div class="bg-[#0066aa] p-5 text-white flex justify-between items-center font-bold text-sm">
-            <span>DENTAMEDI SUPORTE</span>
-            <i onclick="toggleChat()" class="fa-solid fa-xmark cursor-pointer"></i>
+    <div id="chatWindow" class="fixed bottom-24 right-6 w-[350px] max-w-[90vw] h-[520px] bg-white rounded-[30px] shadow-2xl z-[1001] flex-col overflow-hidden border">
+        <div class="bg-[#0066aa] p-5 text-white flex justify-between items-center font-bold text-sm tracking-wide">
+            <span>ASSISTENTE VIRTUAL</span>
+            <i onclick="toggleChat()" class="fa-solid fa-xmark cursor-pointer text-lg"></i>
         </div>
-        <div id="chatContent" class="flex-1 p-5 overflow-y-auto space-y-4 bg-zinc-50 text-xs">
-            <div class="bg-white p-3 rounded-2xl rounded-tl-none border">Olá! Como posso ajudar hoje?</div>
+        <div id="chatContent" class="flex-1 p-5 overflow-y-auto space-y-4 bg-zinc-50 text-xs leading-relaxed text-zinc-700">
+            <div class="bg-white p-4 rounded-2xl rounded-tl-none border shadow-sm">Estimado paciente, seja bem-vindo à Dentamedi. Sou o seu assistente virtual. Como posso ter a honra de o ajudar hoje?</div>
         </div>
         <div class="p-3 bg-white border-t flex gap-2">
-            <input id="chatInput" type="text" placeholder="Escreva aqui..." class="flex-1 p-3 bg-zinc-100 rounded-xl outline-none text-xs">
-            <button onclick="sendChat()" class="bg-[#0066aa] text-white px-4 rounded-xl"><i class="fa-solid fa-paper-plane"></i></button>
+            <input id="chatInput" type="text" placeholder="Escreva a sua dúvida..." class="flex-1 p-3 bg-zinc-100 rounded-xl outline-none text-xs">
+            <button onclick="sendChat()" class="bg-[#0066aa] text-white px-4 rounded-xl hover:bg-[#004477] transition-colors"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
 
     <script>
         function toggleChat() { document.getElementById('chatWindow').classList.toggle('chat-open'); }
+        
+        const knowledge = [
+            { keys: ['horário', 'hora', 'abre', 'fecha', 'semana', 'funcionamento'], resp: "O nosso horário de funcionamento é de Segunda a Sexta-feira, das 09h00 às 19h00. Estaremos ao seu inteiro dispor." },
+            { keys: ['seguro', 'acordo', 'médis', 'rodonorte', 'enfermeiros', 'sams', 'montepio', 'gnr', 'inatel', 'professores', 'parceria', 'sindicato'], resp: "Temos o privilégio de colaborar com as seguintes entidades: Médis, AdvanceCare, Rodonorte, Ordem dos Enfermeiros, Sindicato dos Professores Licenciados, SAD-GNR, Montepio e SAMS. Dispomos também de condições especiais (15% de desconto) para sócios do INATEL." },
+            { keys: ['tratamento', 'lista', 'fazem', 'serviço', 'limpeza', 'aparelho', 'implante', 'ortodontia', 'estética', 'branqueamento'], resp: "Dispomos de uma vasta gama de tratamentos de excelência, incluindo Implantes e Reabilitação, Ortodontia (Aparelhos), Branqueamentos e Estética, Higiene Oral, Odontopediatria e urgências dentárias." },
+            { keys: ['vila real', 'morada', 'onde', 'localização', 'mapa'], resp: "A nossa clínica em Vila Real encontra-se na Avenida da Noruega, número 314. Poderá contactar-nos através do número 259 348 915." },
+            { keys: ['sabrosa', 'clinica de sabrosa'], resp: "A nossa clínica em Sabrosa localiza-se na Rua de Trás, número 1. Para marcações, por favor ligue para o 259 939 702." },
+            { keys: ['marcar', 'marcação', 'consulta', 'agendar', 'telefone', 'contacto'], resp: "Para proceder à marcação de uma consulta, pedimos que utilize o formulário disponível na nossa página ou que nos contacte diretamente via telefone: 259 348 915 (Vila Real) ou 259 939 702 (Sabrosa)." },
+            { keys: ['olá', 'bom dia', 'boa tarde', 'boa noite', 'saudações'], resp: "Saudações! É um gosto recebê-lo. Em que lhe posso ser útil no dia de hoje?" }
+        ];
+
         function sendChat() {
             const input = document.getElementById('chatInput');
             const content = document.getElementById('chatContent');
             const text = input.value.trim().toLowerCase();
             if(!text) return;
-            content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[85%]">${input.value}</div>`;
-            let reply = "Para marcações imediatas, por favor ligue para Vila Real (259 348 915) ou Sabrosa (259 939 702).";
-            if(text.includes('horário')) reply = "Segunda a Sexta: 09h00 - 19h00.";
-            if(text.includes('acordo') || text.includes('seguro')) reply = "Aceitamos Médis, AdvanceCare, Rodonorte, Ordem dos Enfermeiros, Sindicato Professores, SAD-GNR, Montepio e SAMS.";
+            
+            content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[85%] font-medium shadow-sm">${input.value}</div>`;
+            
+            let reply = "Lamento, mas não compreendi a sua questão. Para um atendimento mais personalizado, sugerimos que preencha o formulário na nossa página ou contacte as nossas clínicas.";
+            
+            for (let item of knowledge) { 
+                if (item.keys.some(k => text.includes(k))) { 
+                    reply = item.resp; 
+                    break; 
+                } 
+            }
+            
             setTimeout(() => {
-                content.innerHTML += `<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border w-fit max-w-[90%]">${reply}</div>`;
+                content.innerHTML += `<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-zinc-200 w-fit max-w-[90%]">${reply}</div>`;
                 content.scrollTop = content.scrollHeight;
             }, 500);
+            
             input.value = "";
         }
+        
+        document.getElementById('chatInput').addEventListener('keypress', (e) => { if(e.key === 'Enter') sendChat(); });
     </script>
 </body>
 </html>
