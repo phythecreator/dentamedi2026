@@ -29,7 +29,7 @@
         .treatment-card:hover { border-color: #0066aa; transform: translateY(-5px); transition: all 0.3s ease; }
 
         details summary::-webkit-details-marker { display: none; }
-        details[open] summary i { transform: rotate(180deg); }
+        details[open] summary i { transform: rotate(45deg); }
     </style>
 </head>
 <body class="bg-white text-zinc-800">
@@ -169,7 +169,7 @@
                 <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
                     <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Como posso agendar uma consulta?
-                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
+                        <i class="fa-solid fa-plus transition-transform text-[#0066aa]"></i>
                     </summary>
                     <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Poderá agendar a sua consulta através do formulário de contacto neste site, ou ligando diretamente para as nossas clínicas em Vila Real (259 348 915) ou Sabrosa (259 939 702).
@@ -178,7 +178,7 @@
                 <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
                     <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Trabalham com seguros de saúde?
-                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
+                        <i class="fa-solid fa-plus transition-transform text-[#0066aa]"></i>
                     </summary>
                     <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Sim, temos acordos com as principais seguradoras, incluindo Médis, AdvanceCare, SAD-GNR, Montepio e diversas ordens profissionais. Consulte a nossa lista de acordos acima.
@@ -187,7 +187,7 @@
                 <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
                     <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Atendem urgências dentárias?
-                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
+                        <i class="fa-solid fa-plus transition-transform text-[#0066aa]"></i>
                     </summary>
                     <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Sim. Fazemos o nosso melhor para acomodar situações de urgência no próprio dia. Recomendamos o contacto telefónico imediato para agilizar o atendimento.
@@ -206,7 +206,7 @@
                 <p class="text-zinc-600 mb-4">Avenida da Noruega, 314</p>
                 <a href="tel:259348915" class="text-2xl font-black">259 348 915</a>
                 <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.50!2d-7.74051!3d41.30054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a242c75a92d%3A0x0!2zNDHCsDE4JzAxLjkiTiA3wrA0NCcyNS44Ilc!5e0!3m2!1spt-PT!2spt" allowfullscreen=""></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.345!2d-7.74!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a2!2sVila%20Real!5e0!3m2!1spt!2spt!4v12345" allowfullscreen=""></iframe>
                 </div>
             </div>
             <div class="bg-zinc-50 p-8 rounded-[40px] border">
@@ -214,7 +214,7 @@
                 <p class="text-zinc-600 mb-4">Rua de Trás, 1</p>
                 <a href="tel:259939702" class="text-2xl font-black">259 939 702</a>
                 <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.77!2d-7.5779!3d41.2654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b589!2zNDHCsDE1JzU1LjQiTiA3wrAzNCc0MC40Ilc!5e0!3m2!1spt-PT!2spt" allowfullscreen=""></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.345!2d-7.57!3d41.26!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a2!2sSabrosa!5e0!3m2!1spt!2spt!4v12345" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -265,13 +265,12 @@
 
     <div id="privacyModal" class="fixed inset-0 bg-black/80 z-[2000] hidden items-center justify-center p-6 backdrop-blur-sm">
         <div class="bg-white max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-[40px] p-10 relative">
-            <button onclick="toggleModal()" class="absolute top-6 right-6 text-2xl text-zinc-400 hover:text-red-600 transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-2xl text-zinc-400 hover:text-red-500 transition-colors"><i class="fa-solid fa-xmark"></i></button>
             <h2 class="text-2xl font-black mb-6 uppercase text-[#0066aa]">Termos e Privacidade</h2>
             <div class="text-zinc-600 text-sm leading-relaxed space-y-4 font-medium">
                 <p><b>1. Consentimento:</b> Ao utilizar este site, concorda com a recolha mínima de dados apenas para fins de contacto clínico solicitado.</p>
-                <p><b>2. Proteção de Dados:</b> Os seus dados pessoais (Nome, E-mail e Telefone) são armazenados em segurança e nunca serão cedidos a terceiros. São usados exclusivamente pela Dentamedi para agendamento de consultas.</p>
-                <p><b>3. Cookies:</b> Utilizamos cookies básicos para melhorar a sua experiência de navegação.</p>
-                <p><b>4. Marcações:</b> O envio do formulário online não constitui uma marcação automática, estando sujeito a confirmação telefónica ou via e-mail pela nossa equipa administrativa.</p>
+                <p><b>2. Proteção de Dados:</b> Os seus dados pessoais são armazenados em segurança e usados exclusivamente pela Dentamedi.</p>
+                <p><b>3. Marcações:</b> O envio do formulário online está sujeito a confirmação pela nossa equipa.</p>
             </div>
         </div>
     </div>
@@ -281,14 +280,14 @@
     </div>
     <div id="chatWindow" class="fixed bottom-24 right-6 w-[350px] max-w-[90vw] h-[520px] bg-white rounded-[30px] shadow-2xl z-[1001] flex-col overflow-hidden border">
         <div class="bg-[#0066aa] p-5 text-white flex justify-between items-center font-bold text-sm">
-            <span>SERVIÇO DE APOIO DENTAMEDI</span>
+            <span>ASSISTENTE DENTAMEDI 👋</span>
             <i onclick="toggleChat()" class="fa-solid fa-xmark cursor-pointer text-lg"></i>
         </div>
         <div id="chatContent" class="flex-1 p-5 overflow-y-auto space-y-4 bg-zinc-50 text-xs text-zinc-700">
-            <div class="bg-white p-4 rounded-2xl rounded-tl-none border shadow-sm leading-relaxed">Estimado paciente, seja bem-vindo à Dentamedi. É um privilégio contar com o seu interesse. Em que lhe posso ser útil no dia de hoje?</div>
+            <div class="bg-white p-4 rounded-2xl rounded-tl-none border shadow-sm leading-relaxed">Olá! Tudo bem? 😊 Sou o assistente da Dentamedi. Como te posso ajudar hoje? Podes perguntar sobre preços, seguros, horários ou marcar uma consulta!</div>
         </div>
         <div class="p-3 bg-white border-t flex gap-2">
-            <input id="chatInput" type="text" placeholder="Escreva a sua mensagem..." class="flex-1 p-3 bg-zinc-100 rounded-xl outline-none text-xs">
+            <input id="chatInput" type="text" placeholder="Escreve aqui..." class="flex-1 p-3 bg-zinc-100 rounded-xl outline-none text-xs">
             <button onclick="sendChat()" class="bg-[#0066aa] text-white px-4 rounded-xl hover:bg-[#004477] transition-colors"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
@@ -305,11 +304,27 @@
             
             content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[85%] shadow-sm">${input.value}</div>`;
             
-            let reply = "Estimado paciente, para uma resposta mais célere ou urgente, recomendo o contacto direto via telefone. Deseja os nossos números?";
+            let reply = "Hum, não tenho a certeza se percebi... 😅 Mas olha, podes sempre ligar-nos para o 259 348 915 ou preencher o formulário aqui no site!";
             
-            if(text.includes('horário')) reply = "O nosso horário de atendimento decorre de Segunda a Sexta-feira, entre as 09h00 e as 19h00.";
-            if(text.includes('acordo') || text.includes('seguro')) reply = "Temos a honra de colaborar com diversas entidades de prestígio, tais como Médis, AdvanceCare, SAD-GNR e Montepio.";
-            if(text.includes('sobre') || text.includes('história')) reply = "A Dentamedi foi fundada em 1997 e conta hoje com mais de 29 anos de dedicação exclusiva à saúde oral e inovação clínica.";
+            // Lógica de 20+ Palavras-Chave
+            if(text.includes('horário') || text.includes('abertos')) reply = "Estamos abertos de Segunda a Sexta, das 09:00 às 19:00. No fim de semana descansamos! 🏥";
+            else if(text.includes('preço') || text.includes('valor') || text.includes('custo') || text.includes('quanto')) reply = "Os valores variam conforme o que precisares. O melhor é marcares uma avaliação para te darmos um orçamento certinho! 🦷💰";
+            else if(text.includes('onde') || text.includes('localização') || text.includes('vila real') || text.includes('sabrosa') || text.includes('morada')) reply = "Temos duas clínicas! Uma em Vila Real (Av. Noruega) e outra em Sabrosa (Rua de Trás). Qual te dá mais jeito? 📍";
+            else if(text.includes('seguro') || text.includes('acordo') || text.includes('médis') || text.includes('multicare') || text.includes('advancecare') || text.includes('montepio')) reply = "Sim! Temos acordos com Médis, Multicare, AdvanceCare, Montepio, SAD-GNR e muitos outros. Traz o teu cartão na consulta! 💳";
+            else if(text.includes('urgência') || text.includes('dor') || text.includes('doer') || text.includes('emergência')) reply = "Se estás com dores, liga-nos JÁ para o 259 348 915 (Vila Real) ou 259 939 702 (Sabrosa). Vamos tentar ver-te hoje! 🆘";
+            else if(text.includes('criança') || text.includes('filho') || text.includes('miúdo') || text.includes('odontopediatria')) reply = "Claro! Adoramos receber os mais pequenos. Temos especialistas em odontopediatria muito pacientes! 🧒✨";
+            else if(text.includes('aparelho') || text.includes('alinhador') || text.includes('invisalign') || text.includes('ortodontia')) reply = "Queres alinhar o sorriso? Temos aparelhos fixos e os famosos alinhadores invisíveis. Queres agendar uma avaliação? 🦷😁";
+            else if(text.includes('implante') || text.includes('dente novo') || text.includes('prótese') || text.includes('coroa')) reply = "Somos especialistas em reabilitação oral. Devolvemos-te o sorriso com implantes de alta qualidade. 💎";
+            else if(text.includes('limpeza') || text.includes('destartarização') || text.includes('check-up')) reply = "Uma limpeza faz maravilhas! Deves fazer uma de 6 em 6 meses. Queres marcar a tua? 🪥🧼";
+            else if(text.includes('branqueamento') || text.includes('facetas') || text.includes('estética')) reply = "Queres um sorriso de Hollywood? Temos branqueamento LED e facetas de porcelana. Vais ficar a brilhar! ✨🌟";
+            else if(text.includes('contacto') || text.includes('telefone') || text.includes('ligar')) reply = "Podes ligar para o 259 348 915 (Vila Real) ou 259 939 702 (Sabrosa). Estamos à espera! 📞";
+            else if(text.includes('marcar') || text.includes('consulta') || text.includes('agendar')) reply = "Boa! Podes usar o formulário aqui em cima ou ligar-nos. O que preferes? 📅";
+            else if(text.includes('extração') || text.includes('tirar dente') || text.includes('siso')) reply = "Fazemos extrações sem dor e com todo o cuidado. Se for um siso, o nosso cirurgião resolve isso num instante! 🦷💉";
+            else if(text.includes('canal') || text.includes('desvitalizar') || text.includes('endodontia')) reply = "Se o dente dói muito, pode precisar de desvitalizar. Tratamos disso com tecnologia de ponta para não sentires nada! 🔬";
+            else if(text.includes('sábado') || text.includes('domingo') || text.includes('férias')) reply = "Ao fim de semana estamos fechados para recarregar baterias. De Segunda a Sexta estamos cá para ti! 🔋";
+            else if(text.includes('história') || text.includes('anos') || text.includes('experiência')) reply = "Já cá estamos desde 1997! São 29 anos a cuidar dos sorrisos da nossa região. Somos de confiança! 🏆";
+            else if(text.includes('obrigado') || text.includes('valeu') || text.includes('thanks')) reply = "De nada! Se precisares de mais alguma coisa, estou por aqui. Até já! 👋😊";
+            else if(text.includes('ajuda') || text.includes('olá') || text.includes('bom dia')) reply = "Olá! Como te posso ajudar? Podes perguntar sobre consultas, preços, seguros ou onde estamos! 👋";
 
             setTimeout(() => {
                 content.innerHTML += `<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-zinc-200 w-fit max-w-[90%] leading-relaxed">${reply}</div>`;
