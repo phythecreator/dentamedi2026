@@ -80,14 +80,15 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-black section-title mb-16 uppercase">Os nossos acordos</h2>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-                <img src="MÉDIS.png" class="h-24 md:h-32 logo-hover object-contain">
-                <img src="imagem_2026-03-28_224333470.png" class="h-24 md:h-32 logo-hover object-contain">
-                <img src="wells.jpg" class="h-24 md:h-32 logo-hover object-contain">
-                <img src="sad-gnr-margem-sul.png" class="h-24 md:h-32 logo-hover object-contain">
-                <img src="montepio.png" class="h-24 md:h-32 logo-hover object-contain">
-                <img src="imagem_2026-03-28_224622784.png" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="MÉDIS.png" alt="Médis" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="imagem_2026-03-28_224333470.png" alt="AdvanceCare" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="imagem_2026-03-29_094654969.png" alt="Rodonorte" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="imagem_2026-03-29_094744485.png" alt="Ordem dos Enfermeiros" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="sad-gnr-margem-sul.png" alt="SAD GNR" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="montepio.png" alt="Montepio" class="h-24 md:h-32 logo-hover object-contain">
+                <img src="imagem_2026-03-28_224622784.png" alt="SAMS" class="h-24 md:h-32 logo-hover object-contain">
                 <div class="flex flex-col items-center bg-zinc-50 p-6 rounded-3xl border shadow-sm">
-                    <img src="inatel.jpg" class="h-20 mb-3">
+                    <img src="inatel.jpg" alt="Inatel" class="h-20 mb-3">
                     <span class="text-sm font-black text-white bg-red-600 px-4 py-1 rounded-full uppercase">15% Desconto</span>
                 </div>
             </div>
@@ -167,7 +168,7 @@
         </div>
         <div id="chatContent" class="flex-1 p-6 overflow-y-auto space-y-4 bg-zinc-50 text-sm">
             <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-zinc-700 leading-relaxed border">
-                Olá! 👋 Sou o assistente da Dentamedi. <br><br>Pode perguntar-me sobre <b>horários, acordos, contactos ou as nossas clínicas em Vila Real e Sabrosa</b>. Como posso ajudar?
+                Olá! 👋 Sou o assistente da Dentamedi. <br><br>Pode perguntar-me sobre <b>tratamentos, horários, acordos, contactos ou localizações</b>. Como posso ajudar hoje?
             </div>
         </div>
         <div class="p-4 bg-white border-t flex gap-2">
@@ -180,13 +181,14 @@
         function toggleChat() { document.getElementById('chatWindow').classList.toggle('chat-open'); }
 
         const knowledge = [
-            { keys: ['horário', 'hora', 'abre', 'fecha', 'aberto', 'fechado', 'sábado', 'domingo', 'segunda', 'sexta'], resp: "O nosso horário geral é de <b>Segunda a Sexta-feira, das 09h00 às 19h00</b>. Ao Sábado e Domingo estamos encerrados." },
-            { keys: ['acordo', 'seguro', 'médis', 'medis', 'advance', 'wells', 'well', 'gnr', 'sad', 'montepio', 'sams', 'inatel', 'desconto'], resp: "Trabalhamos com: <b>Médis, AdvanceCare, Well's, SAD-GNR, Montepio e SAMS</b>. Sócios do <b>INATEL</b> têm 15% de desconto direto em tratamentos!" },
-            { keys: ['vila real', 'villarreal', 'norte', 'noruega', 'onde fica', 'morada'], resp: "A nossa clínica de <b>Vila Real</b> fica na Avenida da Noruega, 314. Ligue para 259 348 915." },
-            { keys: ['sabrosa', 'clínica sabrosa'], resp: "A clínica de <b>Sabrosa</b> fica na Rua de Trás, nº 1. Ligue para 259 939 702." },
-            { keys: ['contacto', 'telefone', 'numero', 'email', 'e-mail', 'telemovel', 'ligar'], resp: "<b>Vila Real:</b> 259 348 915<br><b>Sabrosa:</b> 259 939 702<br><b>Email:</b> dentamedi@gmail.com" },
-            { keys: ['limpeza', 'carie', 'dor', 'urgencia', 'dente', 'siso', 'arrancar', 'branqueamento', 'aparelho', 'implante', 'protese', 'tratamento'], resp: "Realizamos todos os tratamentos: Implantes, Aparelhos (Ortodontia), Branqueamentos, Estética, Limpezas e Urgências. Pode agendar através do formulário no site!" },
-            { keys: ['olá', 'bom dia', 'boa tarde', 'boa noite', 'ajuda'], resp: "Olá! Como posso ajudar? Pode perguntar-me por localizações, seguros aceites ou horários." }
+            { keys: ['horário', 'hora', 'abre', 'fecha', 'aberto', 'fechado', 'sábado', 'domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'fim de semana', 'feriado', 'horas'], resp: "O nosso horário geral é de <b>Segunda a Sexta-feira, das 09h00 às 19h00</b>. Ao Sábado e Domingo estamos encerrados." },
+            { keys: ['acordo', 'seguro', 'médis', 'medis', 'advance', 'gnr', 'sad', 'montepio', 'sams', 'inatel', 'desconto', 'convenio', 'rodonorte', 'enfermeiros', 'ordem', 'parceria'], resp: "Trabalhamos com: <b>Médis, AdvanceCare, Rodonorte, Ordem dos Enfermeiros, SAD-GNR, Montepio e SAMS</b>. Sócios do <b>INATEL</b> têm 15% de desconto direto em tratamentos!" },
+            { keys: ['vila real', 'villarreal', 'norte', 'noruega', 'onde fica', 'morada', 'localização', 'mapa', 'direções', 'ir para'], resp: "A nossa clínica de <b>Vila Real</b> fica na Avenida da Noruega, 314. Ligue para 259 348 915 ou use os mapas acima no site." },
+            { keys: ['sabrosa', 'clínica sabrosa', 'ir para sabrosa'], resp: "A clínica de <b>Sabrosa</b> fica na Rua de Trás, nº 1. Ligue para 259 939 702 ou use os mapas acima no site." },
+            { keys: ['contacto', 'telefone', 'numero', 'email', 'e-mail', 'telemovel', 'ligar', 'marcar', 'marcação', 'agendar', 'consulta', 'falar com'], resp: "Pode marcar a sua consulta preenchendo o formulário no site ou pelos números:<br><b>Vila Real:</b> 259 348 915<br><b>Sabrosa:</b> 259 939 702<br><b>Email:</b> dentamedi@gmail.com" },
+            { keys: ['preço', 'valor', 'custa', 'orçamento', 'pagamento', 'pagar'], resp: "Os valores variam consoante o tratamento necessário. Recomendamos agendar uma <b>consulta de avaliação</b> para lhe darmos um orçamento exato e adaptado ao seu caso!" },
+            { keys: ['lista', 'quais tratamentos', 'que tratamentos', 'especialidade', 'serviços', 'fazem', 'limpeza', 'carie', 'dor', 'urgencia', 'dente', 'siso', 'arrancar', 'branqueamento', 'aparelho', 'implante', 'protese', 'tratamento', 'ortodontia', 'invisalign', 'faceta', 'coroa'], resp: "Temos uma vasta lista de tratamentos disponíveis:<br><br>• <b>Geral:</b> Check-up, Limpezas, Tratamento de Cáries e Extrações.<br>• <b>Reabilitação:</b> Implantes Dentários, Próteses e Coroas Cerâmicas.<br>• <b>Estética:</b> Aparelhos Ortodônticos, Branqueamento e Facetas.<br>• <b>Urgências:</b> Tratamento de dor aguda." },
+            { keys: ['olá', 'bom dia', 'boa tarde', 'boa noite', 'ajuda', 'hey', 'oi', 'boas'], resp: "Olá! Como posso ajudar? Pode perguntar-me por tratamentos, localizações, seguros aceites ou horários." }
         ];
 
         function sendChat() {
@@ -197,7 +199,7 @@
 
             content.innerHTML += `<div class="bg-[#0066aa] text-white p-4 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[85%] font-bold shadow-md">${input.value}</div>`;
             
-            let reply = "Pedimos desculpa, mas não entendi essa questão. 😕 Tente palavras como 'horário', 'seguros' ou 'onde ficam'.";
+            let reply = "Pedimos desculpa, mas não entendi essa questão. 😕 Tente palavras como 'tratamentos', 'horários', 'seguros' ou 'marcação'.";
 
             for (let item of knowledge) {
                 if (item.keys.some(k => text.includes(k))) {
