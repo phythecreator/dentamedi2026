@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentamedi • Excelência em Saúde Oral</title>
+    <title>Dentamedi • O seu sorriso em boas mãos</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,13 +21,13 @@
             content: ''; display: block; width: 60px; height: 4px; background: #0066aa; margin: 15px auto; border-radius: 2px;
         }
 
-        #chatWindow { display: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .chat-open { display: flex !important; }
+        /* Modais e Chat */
+        #chatWindow, #privacyModal { display: none; }
+        .chat-open, .modal-open { display: flex !important; }
         
         .logo-hover:hover { transform: scale(1.05); transition: all 0.3s ease; }
         .treatment-card:hover { border-color: #0066aa; transform: translateY(-5px); transition: all 0.3s ease; }
 
-        /* Estilo para FAQ Accordion */
         details summary::-webkit-details-marker { display: none; }
         details[open] summary i { transform: rotate(180deg); }
     </style>
@@ -60,15 +60,28 @@
         </div>
     </section>
 
-    <section id="sobre" class="py-24 bg-zinc-50 border-b">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black section-title uppercase mb-12">Sobre a DentaMedi</h2>
-            <p class="text-xl md:text-2xl leading-relaxed text-zinc-600 font-medium">
-                Fundada em 1997, a <span class="text-[#0066aa] font-bold">DentaMedi</span> é uma clínica dentária com mais de <span class="text-zinc-900 font-bold">29 anos de experiência</span>, reconhecida pela solidez no atendimento e inovação constante. 
-            </p>
-            <p class="mt-6 text-lg text-zinc-500 leading-relaxed">
-                Contamos com uma equipa profissional altamente qualificada e tecnologia avançada para garantir serviços de excelência e máxima precisão em saúde oral. O nosso compromisso é com a qualidade e o bem-estar de cada paciente que nos visita.
-            </p>
+    <section id="sobre" class="py-24 bg-white border-b overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-black section-title uppercase !text-left after:ml-0">Sobre a Dentamedi</h2>
+                    <div class="space-y-6 text-lg text-zinc-600 leading-relaxed font-medium">
+                        <p>
+                            Na <span class="text-[#0066aa] font-bold">Dentamedi</span>, acreditamos que cuidar do seu sorriso é mais do que uma profissão — é um compromisso com a sua confiança e bem-estar.
+                        </p>
+                        <p>
+                            Fundada em 1997, a nossa história conta já com <span class="text-zinc-900 font-bold">29 anos de experiência</span> e dedicação. Nascemos com a missão de humanizar a medicina dentária, aliando a solidez do atendimento tradicional à inovação constante que a tecnologia moderna exige.
+                        </p>
+                        <p>
+                            Aqui, não tratamos apenas dentes; cuidamos de pessoas. A nossa equipa altamente qualificada trabalha diariamente para garantir que cada visita seja pautada pela máxima precisão e, acima de tudo, por um sorriso no rosto de quem nos visita.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-[#0066aa]/10 rounded-[50px] rotate-3 -z-10"></div>
+                    <img src="imagem_2026-03-29_104544504.png" alt="Equipa Dentamedi" class="rounded-[40px] shadow-2xl w-full h-[500px] object-cover">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -149,34 +162,34 @@
         </div>
     </section>
 
-    <section class="py-20 bg-zinc-900 text-white">
+    <section class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-12 uppercase tracking-wide">Dúvidas Frequentes</h2>
-            <div class="space-y-4">
-                <details class="group bg-zinc-800 rounded-2xl border border-zinc-700">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold uppercase text-sm tracking-wider">
+            <h2 class="text-4xl font-black text-center mb-16 uppercase tracking-wide">Dúvidas Frequentes</h2>
+            <div class="space-y-6">
+                <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
+                    <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Como posso agendar uma consulta?
-                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
                     </summary>
-                    <div class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-700 mt-2">
+                    <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Poderá agendar a sua consulta através do formulário de contacto neste site, ou ligando diretamente para as nossas clínicas em Vila Real (259 348 915) ou Sabrosa (259 939 702).
                     </div>
                 </details>
-                <details class="group bg-zinc-800 rounded-2xl border border-zinc-700">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold uppercase text-sm tracking-wider">
+                <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
+                    <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Trabalham com seguros de saúde?
-                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
                     </summary>
-                    <div class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-700 mt-2">
+                    <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Sim, temos acordos com as principais seguradoras, incluindo Médis, AdvanceCare, SAD-GNR, Montepio e diversas ordens profissionais. Consulte a nossa lista de acordos acima.
                     </div>
                 </details>
-                <details class="group bg-zinc-800 rounded-2xl border border-zinc-700">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold uppercase text-sm tracking-wider">
+                <details class="group bg-white rounded-3xl border-2 border-zinc-100 hover:border-[#0066aa] transition-all shadow-sm">
+                    <summary class="flex justify-between items-center p-8 cursor-pointer font-bold uppercase text-xs tracking-widest text-zinc-700">
                         Atendem urgências dentárias?
-                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        <i class="fa-solid fa-plus transition-transform group-open:rotate-45 text-[#0066aa]"></i>
                     </summary>
-                    <div class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-700 mt-2">
+                    <div class="p-8 pt-0 text-zinc-500 leading-relaxed border-t border-zinc-50 mt-2">
                         Sim. Fazemos o nosso melhor para acomodar situações de urgência no próprio dia. Recomendamos o contacto telefónico imediato para agilizar o atendimento.
                     </div>
                 </details>
@@ -193,7 +206,7 @@
                 <p class="text-zinc-600 mb-4">Avenida da Noruega, 314</p>
                 <a href="tel:259348915" class="text-2xl font-black">259 348 915</a>
                 <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980!2d-7.55!3d41.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%20Tr%C3%A1s%20da%20C%C3%A2mara%2C%20N%C2%BA%201%2C%205060-316%20Sabrosa!5e0!3m2!1spt-PT!2spt!4v17400000000001" allowfullscreen=""></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.50!2d-7.74051!3d41.30054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b4a242c75a92d%3A0x0!2zNDHCsDE4JzAxLjkiTiA3wrA0NCcyNS44Ilc!5e0!3m2!1spt-PT!2spt" allowfullscreen=""></iframe>
                 </div>
             </div>
             <div class="bg-zinc-50 p-8 rounded-[40px] border">
@@ -201,7 +214,7 @@
                 <p class="text-zinc-600 mb-4">Rua de Trás, 1</p>
                 <a href="tel:259939702" class="text-2xl font-black">259 939 702</a>
                 <div class="h-64 mt-6 rounded-3xl overflow-hidden border-4 border-white shadow-md">
-                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980!2d-7.55!3d41.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%20Tr%C3%A1s%20da%20C%C3%A2mara%2C%20N%C2%BA%201%2C%205060-316%20Sabrosa!5e0!3m2!1spt-PT!2spt!4v17400000000002" allowfullscreen=""></iframe>
+                    <iframe width="100%" height="100%" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.77!2d-7.5779!3d41.2654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3b589!2zNDHCsDE1JzU1LjQiTiA3wrAzNCc0MC40Ilc!5e0!3m2!1spt-PT!2spt" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -214,7 +227,15 @@
                     <input type="email" name="email" placeholder="E-mail" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all">
                     <input type="tel" name="phone" placeholder="Telemóvel" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all">
                 </div>
-                <textarea name="message" placeholder="A sua mensagem..." rows="4" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white resize-none transition-all"></textarea>
+                <select name="treatment" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white transition-all text-zinc-500 font-semibold">
+                    <option value="" disabled selected>Tratamento Pretendido</option>
+                    <option value="Check-up">Check-up e Higiene</option>
+                    <option value="Implantes">Implantes / Reabilitação</option>
+                    <option value="Estetica">Estética / Branqueamento</option>
+                    <option value="Ortodontia">Aparelhos / Alinhadores</option>
+                    <option value="Outro">Outro Assunto</option>
+                </select>
+                <textarea name="message" placeholder="A sua mensagem (Preferência de horário, etc.)..." rows="4" required class="w-full p-5 bg-zinc-50 border-2 border-transparent rounded-2xl outline-none focus:border-[#0066aa] focus:bg-white resize-none transition-all"></textarea>
                 <button type="submit" class="w-full bg-[#0066aa] text-white py-6 rounded-2xl font-black text-xl hover:bg-[#004477] shadow-xl transition-all uppercase tracking-widest">Enviar Pedido</button>
             </form>
         </div>
@@ -235,12 +256,25 @@
             <a href="https://www.instagram.com/clinica_dentamedi/" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="flex flex-col md:flex-row justify-center gap-6 text-xs uppercase tracking-[0.2em] font-bold text-zinc-500">
-            <a href="#" class="hover:text-white">Política de Privacidade</a>
+            <a href="javascript:void(0)" onclick="toggleModal()" class="hover:text-white transition-colors">Política de Privacidade</a>
             <span>•</span>
-            <a href="#" class="hover:text-white">Termos de Utilização</a>
+            <a href="javascript:void(0)" onclick="toggleModal()" class="hover:text-white transition-colors">Termos e Condições</a>
         </div>
         <p class="mt-8 text-zinc-600 text-[10px] uppercase tracking-widest">© 2026 Dentamedi • Vila Real & Sabrosa</p>
     </footer>
+
+    <div id="privacyModal" class="fixed inset-0 bg-black/80 z-[2000] hidden items-center justify-center p-6 backdrop-blur-sm">
+        <div class="bg-white max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-[40px] p-10 relative">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-2xl text-zinc-400 hover:text-red-600 transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="text-2xl font-black mb-6 uppercase text-[#0066aa]">Termos e Privacidade</h2>
+            <div class="text-zinc-600 text-sm leading-relaxed space-y-4 font-medium">
+                <p><b>1. Consentimento:</b> Ao utilizar este site, concorda com a recolha mínima de dados apenas para fins de contacto clínico solicitado.</p>
+                <p><b>2. Proteção de Dados:</b> Os seus dados pessoais (Nome, E-mail e Telefone) são armazenados em segurança e nunca serão cedidos a terceiros. São usados exclusivamente pela Dentamedi para agendamento de consultas.</p>
+                <p><b>3. Cookies:</b> Utilizamos cookies básicos para melhorar a sua experiência de navegação.</p>
+                <p><b>4. Marcações:</b> O envio do formulário online não constitui uma marcação automática, estando sujeito a confirmação telefónica ou via e-mail pela nossa equipa administrativa.</p>
+            </div>
+        </div>
+    </div>
 
     <div onclick="toggleChat()" class="fixed bottom-6 right-6 bg-[#0066aa] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl cursor-pointer z-[1000] hover:scale-110 transition-all">
         <i class="fa-solid fa-comment-dots"></i>
@@ -251,7 +285,7 @@
             <i onclick="toggleChat()" class="fa-solid fa-xmark cursor-pointer text-lg"></i>
         </div>
         <div id="chatContent" class="flex-1 p-5 overflow-y-auto space-y-4 bg-zinc-50 text-xs text-zinc-700">
-            <div class="bg-white p-4 rounded-2xl rounded-tl-none border shadow-sm leading-relaxed">Estimado paciente, seja bem-vindo à DentaMedi. É um privilégio contar com o seu interesse. Em que lhe posso ser útil no dia de hoje?</div>
+            <div class="bg-white p-4 rounded-2xl rounded-tl-none border shadow-sm leading-relaxed">Estimado paciente, seja bem-vindo à Dentamedi. É um privilégio contar com o seu interesse. Em que lhe posso ser útil no dia de hoje?</div>
         </div>
         <div class="p-3 bg-white border-t flex gap-2">
             <input id="chatInput" type="text" placeholder="Escreva a sua mensagem..." class="flex-1 p-3 bg-zinc-100 rounded-xl outline-none text-xs">
@@ -261,6 +295,7 @@
 
     <script>
         function toggleChat() { document.getElementById('chatWindow').classList.toggle('chat-open'); }
+        function toggleModal() { document.getElementById('privacyModal').classList.toggle('modal-open'); }
         
         function sendChat() {
             const input = document.getElementById('chatInput');
@@ -270,11 +305,11 @@
             
             content.innerHTML += `<div class="bg-[#0066aa] text-white p-3 rounded-2xl rounded-tr-none ml-auto w-fit max-w-[85%] shadow-sm">${input.value}</div>`;
             
-            let reply = "Lamento, mas não me foi possível processar a sua solicitação. Recomendo que utilize o nosso formulário de contacto ou contacte telefonicamente uma das nossas unidades.";
+            let reply = "Estimado paciente, para uma resposta mais célere ou urgente, recomendo o contacto direto via telefone. Deseja os nossos números?";
             
             if(text.includes('horário')) reply = "O nosso horário de atendimento decorre de Segunda a Sexta-feira, entre as 09h00 e as 19h00.";
-            if(text.includes('acordo') || text.includes('seguro')) reply = "Temos a honra de colaborar com diversas entidades de prestígio, tais como Médis, AdvanceCare, Rodonorte, SAD-GNR e Sindicato dos Professores Licenciados.";
-            if(text.includes('sobre') || text.includes('história')) reply = "A DentaMedi foi fundada em 1997 e conta hoje com mais de 29 anos de dedicação exclusiva à saúde oral e inovação clínica.";
+            if(text.includes('acordo') || text.includes('seguro')) reply = "Temos a honra de colaborar com diversas entidades de prestígio, tais como Médis, AdvanceCare, SAD-GNR e Montepio.";
+            if(text.includes('sobre') || text.includes('história')) reply = "A Dentamedi foi fundada em 1997 e conta hoje com mais de 29 anos de dedicação exclusiva à saúde oral e inovação clínica.";
 
             setTimeout(() => {
                 content.innerHTML += `<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-zinc-200 w-fit max-w-[90%] leading-relaxed">${reply}</div>`;
