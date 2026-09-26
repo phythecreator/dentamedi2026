@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentamedi | Clínica Dentária em Vila Real e Sabrosa</title>
-    <meta name="description" content="A Dentamedi oferece cuidados de medicina dentária, implantes e alinhadores invisíveis em Vila Real e Sabrosa. Agende a sua consulta.">
+    <meta name="description" content="Medicina Dentária, Implantes Dentários e Alinhadores Invisíveis em Vila Real e Sabrosa. Agende a sua consulta na Dentamedi.">
     <link rel="canonical" href="https://dentamedi.pt" />
-    <meta name="keywords" content="dentista Vila Real, clínica dentária Sabrosa, Dentamedi, implantes dentários, aparelhos invisíveis">
+    <meta name="keywords" content="dentista Vila Real, clínica dentária Sabrosa, Dentamedi, implantes dentários, alinhadores invisíveis, consulta dentista">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Open Graph / Meta Tags para Redes Sociais -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dentamedi.pt">
     <meta property="og:title" content="Dentamedi | Clínica Dentária em Vila Real e Sabrosa">
-    <meta property="og:description" content="Tradição, proximidade e tecnologia ao serviço do seu sorriso há 29 anos.">
+    <meta property="og:description" content="A sua clínica de confiança em Vila Real e Sabrosa há 29 anos.">
     <meta property="og:image" content="imagem_2026-03-28_224051293.png">
 
-    <!-- JSON-LD SEO Local -->
+    <!-- Schema JSON-LD: Local Business (Google Maps / Sitelinks) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,7 +50,41 @@
       }
     }
     </script>
-    
+
+    <!-- Schema JSON-LD: FAQPage para SEO / Sitelinks Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde ficam localizadas as clínicas Dentamedi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temos clínicas em Vila Real (Avenida da Noruega, 314) e em Sabrosa (Rua de Trás, 1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como posso agendar uma consulta na Dentamedi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode agendar diretamente pelo formulário online do site ou através dos telefones 259 348 915 (Vila Real) e 259 939 702 (Sabrosa)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os acordos e seguros aceites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabalhamos com Médis, Multicare, AdvanceCare, Allianz, SAMS, SAD-GNR, Montepio, RNA, Inatel e regime livre."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,8 +93,10 @@
     
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; color: #1e293b; }
-        .hero-bg {
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.8) 100%), url('imagem_2026-03-28_230235171.png') center/cover no-repeat;
+        .hero-section {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
         }
         .btn-primary {
             background-color: #0284c7;
@@ -71,8 +107,11 @@
             transform: translateY(-2px);
         }
         .partner-logo {
+            height: 3.5rem; /* ~56px */
+            max-width: 160px;
+            object-fit: contain;
             filter: grayscale(100%);
-            opacity: 0.7;
+            opacity: 0.75;
             transition: all 0.3s ease;
         }
         .partner-logo:hover {
@@ -82,11 +121,12 @@
         }
         #chatWindow { display: none; }
         #chatWindow.chat-open { display: flex !important; }
+        details summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-slate-50 antialiased">
 
-    <!-- Topo Informativo -->
+    <!-- Topo de Contacto Rápido -->
     <div class="bg-slate-900 text-slate-300 text-xs py-2 px-6">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <span class="flex items-center gap-2">
@@ -103,7 +143,7 @@
         </div>
     </div>
 
-    <!-- Navegação -->
+    <!-- Navegação Principal -->
     <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#">
@@ -112,8 +152,8 @@
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="#sobre" class="hover:text-sky-600 transition-colors">A Clínica</a>
                 <a href="#especialidades" class="hover:text-sky-600 transition-colors">Serviços</a>
-                <a href="#invisalign-test" class="hover:text-sky-600 transition-colors">Alinhadores Invisíveis</a>
                 <a href="#acordos" class="hover:text-sky-600 transition-colors">Acordos</a>
+                <a href="#faq" class="hover:text-sky-600 transition-colors">Perguntas Frequentes</a>
                 <a href="#contactos" class="btn-primary text-white px-6 py-2.5 rounded-full font-bold shadow-md shadow-sky-600/20">Marcar Consulta</a>
             </nav>
             <a href="tel:259348915" class="md:hidden bg-sky-600 text-white px-4 py-2 rounded-full text-xs font-bold">
@@ -123,39 +163,36 @@
     </header>
 
     <main>
-        <!-- Hero principal -->
-        <section class="hero-bg min-h-[75vh] flex items-center justify-center text-white px-6 py-20 text-center">
-            <div class="max-w-3xl mx-auto">
+        <!-- Hero Section com Rotação de Imagem de Fundo (8 segundos) -->
+        <section id="heroSlider" class="hero-section min-h-[70vh] flex items-center justify-center text-white px-6 py-20 text-center relative" style="background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%), url('imagem_2026-03-28_230235171.png');">
+            <div class="max-w-3xl mx-auto z-10">
                 <span class="inline-block bg-sky-500/20 backdrop-blur-md text-sky-200 border border-sky-400/30 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
-                    Desde 1997 em Trás-os-Montes
+                    Dentamedi em Vila Real e Sabrosa
                 </span>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                    Cuidamos da sua saúde oral com proximidade e rigor.
+                    Cuidamos do seu sorriso com rigor e proximidade.
                 </h1>
                 <p class="mt-6 text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-xl mx-auto">
-                    Medicina dentária dedicada, implantes e ortodontia estética em Vila Real e Sabrosa.
+                    Tecnologia avançada em medicina dentária, implantes e ortodontia.
                 </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#contactos" class="w-full sm:w-auto bg-white text-slate-900 px-8 py-3.5 rounded-full font-bold hover:bg-slate-100 transition-all shadow-lg">
+                <div class="mt-8 flex justify-center">
+                    <a href="#contactos" class="btn-primary text-white px-10 py-4 rounded-full font-bold text-base shadow-xl">
                         Marcar Consulta
-                    </a>
-                    <a href="#invisalign-test" class="w-full sm:w-auto bg-transparent border border-white/40 text-white px-7 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">
-                        Teste Alinhadores Invisíveis
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Apresentação da Clínica -->
+        <!-- Sobre a Clínica -->
         <section id="sobre" class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Quem Somos</span>
-                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-6">Uma história de confiança e dedicação ao seu sorriso</h2>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-6">Tradição e tecnologia ao serviço da sua saúde oral</h2>
                         <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
-                            <p>Na Dentamedi, acreditamos que a medicina dentária deve unir tecnologia moderna a um tratamento verdadeiramente humano e personalizado.</p>
-                            <p>Com 29 anos de presença no distrito de Vila Real, acompanhamos gerações de famílias com o mesmo compromisso: proporcionar conforto, segurança e resultados duradouros.</p>
+                            <p>Na Dentamedi, combinamos experiência clínica com um atendimento personalizado para garantir o máximo conforto em cada visita.</p>
+                            <p>Com equipas dedicadas em Vila Real e Sabrosa, cuidamos da prevenção, reabilitação e estética do seu sorriso há 29 anos.</p>
                         </div>
                     </div>
                     <div class="relative">
@@ -165,123 +202,242 @@
             </div>
         </section>
 
-        <!-- Especialidades Simplificadas -->
+        <!-- Serviços / Especialidades -->
         <section id="especialidades" class="py-20 bg-slate-50 border-y border-slate-100">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center max-w-xl mx-auto mb-12">
-                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Cuidados Integrais</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Áreas de Atuação</h2>
+                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Especialidades</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Tratamentos Dentários</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Check-up e Prevenção</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Higiene oral, destartarização e tratamento de cáries. O acompanhamento regular para manter os seus dentes e gengivas saudáveis.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Higiene oral profunda, destartarização e diagnóstico precoce para manter dentes e gengivas saudáveis.</p>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">Reabilitação Oral</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Implantes dentários, coroas e próteses fixas para devolver a função mastigatória e o conforto no seu dia a dia.</p>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Reabilitação e Implantes</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Substituição de peças em falta através de implantes dentários e próteses fixas com máxima precisão.</p>
                     </div>
 
                     <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
                         <h3 class="text-xl font-bold text-slate-900 mb-3">Ortodontia e Estética</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Alinhadores invisíveis, aparelhos convencionais e branqueamentos para melhorar a harmonia do seu sorriso.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Alinhadores invisíveis, aparelhos convencionais e branqueamentos para renovar a estética do seu sorriso.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Teste de Alinhadores Invisíveis -->
-        <section id="invisalign-test" class="py-20 bg-white">
+        <!-- TESTE DE ALINHADORES INVISÍVEIS (4 PERGUNTAS COM IMAGENS) -->
+        <section id="invisalign-quiz" class="py-20 bg-white border-b border-slate-100">
             <div class="max-w-3xl mx-auto px-6">
                 <div class="text-center mb-10">
-                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Avaliação Rápida</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">O Alinhador Invisível é indicado para si?</h2>
-                    <p class="text-slate-500 text-sm mt-2">Responda a 2 perguntas para entender se este tratamento se adapta ao seu caso.</p>
+                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Auto-Avaliação Ortodôntica</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Teste para Alinhadores Invisíveis</h2>
+                    <p class="text-slate-500 text-sm mt-2">Responda a 4 perguntas rápidas para verificar se cumpre os requisitos do tratamento.</p>
                 </div>
 
                 <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
-                    <!-- Pergunta 1 -->
-                    <div id="alignerQ1" class="space-y-6">
-                        <p class="font-bold text-slate-800 text-base">1. Qual é o seu principal motivo de preocupação com os dentes?</p>
+                    
+                    <!-- PERGUNTA 1 -->
+                    <div id="q1" class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <img src="image-removebg-preview (2).png" alt="Tempo e Disciplina" class="w-16 h-16 object-contain shrink-0">
+                            <h3 class="font-bold text-slate-900 text-base sm:text-lg">1. Tem a disciplina para usar os alinhadores durante 22 horas por dia, retirando-os apenas para comer e escovar os dentes?</h3>
+                        </div>
                         <div class="space-y-3">
-                            <button onclick="nextAlignerQ(1)" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
-                                <span>Dentes tortos ou sobrepostos</span>
-                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                            <button onclick="answerQ(1, 'sim')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Sim, consigo comprometer-me.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
                             </button>
-                            <button onclick="nextAlignerQ(1)" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
-                                <span>Espaços visíveis entre os dentes</span>
-                                <i class="fa-solid fa-angle-right text-slate-400"></i>
-                            </button>
-                            <button onclick="nextAlignerQ(1)" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
-                                <span>Gostaria de melhorar a estética sem usar ferros</span>
-                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                            <button onclick="answerQ(1, 'nao')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Não, prefiro um aparelho fixo que não precise de tirar e pôr.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
                             </button>
                         </div>
+                        <p class="text-xs italic text-slate-500 bg-slate-100 p-3 rounded-lg border border-slate-200/60">
+                            Nota do formulário: Se responder Não, o tratamento vai falhar por falta de uso.
+                        </p>
                     </div>
 
-                    <!-- Pergunta 2 -->
-                    <div id="alignerQ2" class="hidden space-y-6">
-                        <p class="font-bold text-slate-800 text-base">2. Valoriza poder retirar o aparelho para comer e fazer a higiene oral diária?</p>
+                    <!-- PERGUNTA 2 -->
+                    <div id="q2" class="hidden space-y-6">
+                        <div class="flex items-center gap-4">
+                            <img src="12828.png" alt="Saúde Oral e Gengivas" class="w-16 h-16 object-contain shrink-0">
+                            <h3 class="font-bold text-slate-900 text-base sm:text-lg">2. Como está a sua saúde oral atual?</h3>
+                        </div>
                         <div class="space-y-3">
-                            <button onclick="showAlignerResult()" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
-                                <span>Sim, prefiro a conveniência e discrição de um alinhador removível</span>
-                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                            <button onclick="answerQ(2, 'saudavel')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Tenho a boca saudável (sem cáries ativas nem gengivas a sangrar).</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
                             </button>
-                            <button onclick="showAlignerResult()" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
-                                <span>Quero perceber qual a opção mais adequada recomendada pelo dentista</span>
-                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                            <button onclick="answerQ(2, 'problemas')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Tenho cáries por tratar, tártaro ou problemas de gengivas.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
                             </button>
                         </div>
+                        <p class="text-xs italic text-slate-500 bg-slate-100 p-3 rounded-lg border border-slate-200/60">
+                            Nota do formulário: Se tiver problemas, terá de tratá-los no dentista antes de poder usar os alinhadores.
+                        </p>
                     </div>
 
-                    <!-- Resultado -->
-                    <div id="alignerResult" class="hidden text-center py-4 space-y-4">
-                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto text-xl">
+                    <!-- PERGUNTA 3 -->
+                    <div id="q3" class="hidden space-y-6">
+                        <div class="flex items-center gap-4">
+                            <img src="jksjs.png" alt="Implantes Dentários" class="w-16 h-16 object-contain shrink-0">
+                            <h3 class="font-bold text-slate-900 text-base sm:text-lg">3. Tem implantes dentários ou coroas/pontes fixas?</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="answerQ(3, 'naturais')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Não, tenho os meus dentes naturais (ou apenas restaurações simples).</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                            </button>
+                            <button onclick="answerQ(3, 'implantes')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Sim, tenho implantes ou próteses fixas.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs italic text-slate-500 bg-slate-100 p-3 rounded-lg border border-slate-200/60">
+                            Nota do formulário: Os implantes não se movem. O dentista precisará de avaliar se eles impedem o movimento dos restantes dentes.
+                        </p>
+                    </div>
+
+                    <!-- PERGUNTA 4 -->
+                    <div id="q4" class="hidden space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0">4</div>
+                            <h3 class="font-bold text-slate-900 text-base sm:text-lg">4. Qual é o principal problema que quer corrigir no seu sorriso?</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="answerQ(4, 'tortos')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Dentes tortos, encavalitados ou espaços abertos entre dentes.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                            </button>
+                            <button onclick="answerQ(4, 'grave')" class="w-full text-left p-4 bg-white border border-slate-200 rounded-xl hover:border-sky-500 hover:bg-sky-50/50 transition-all font-medium text-sm text-slate-700 flex justify-between items-center">
+                                <span>Uma deformação grave no maxilar ou um problema que exige cirurgia óssea.</span>
+                                <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs italic text-slate-500 bg-slate-100 p-3 rounded-lg border border-slate-200/60">
+                            Nota do formulário: Casos esqueléticos muito graves costumam exigir cirurgia ou ortodontia convencional.
+                        </p>
+                    </div>
+
+                    <!-- RESULTADO DO QUIZ -->
+                    <div id="quizResult" class="hidden text-center py-4 space-y-5">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900">Tem o perfil adequado para avaliação ortodôntica!</h3>
+                        <h3 class="text-2xl font-bold text-slate-900">Questionário Concluído!</h3>
                         <p class="text-slate-600 text-sm leading-relaxed max-w-md mx-auto">
-                            Os alinhadores transparentes proporcionam conforto e discrição. Agende uma consulta para realizar o diagnóstico clínico com a nossa equipa.
+                            Com base nas suas respostas, registámos as suas indicações. Preencha agora os seus dados abaixo para agendarmos a sua consulta de avaliação presencial.
                         </p>
-                        <a href="#contactos" class="inline-block btn-primary text-white px-7 py-3 rounded-full font-bold text-sm shadow-md">
-                            Solicitar Agendamento
-                        </a>
+                        <button onclick="scrollToContactForm()" class="btn-primary text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-md inline-block">
+                            Preencher Dados de Contacto
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Acordos e Parcerias (Tamanho Padronizado) -->
+        <section id="acordos" class="py-16 bg-slate-50 border-b border-slate-200/60">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <span class="text-slate-400 text-xs font-bold uppercase tracking-wider block mb-8">Acordos e Seguros de Saúde</span>
+                
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-10">
+                    <img src="MÉDIS.png" alt="Médis" class="partner-logo">
+                    <img src="imagem_2026-03-28_224333470.png" alt="Multicare" class="partner-logo">
+                    <img src="imagem_2026-03-29_094654969.png" alt="AdvanceCare" class="partner-logo">
+                    <img src="imagem_2026-03-29_094744485.png" alt="Allianz" class="partner-logo">
+                    <img src="imagem_2026-03-29_100157489.png" alt="SAMS" class="partner-logo">
+                    <img src="sad-gnr-margem-sul.png" alt="SAD GNR" class="partner-logo">
+                    <img src="montepio.png" alt="Montepio" class="partner-logo">
+                    <img src="imagem_2026-03-28_224622784.png" alt="RNA" class="partner-logo">
+                    <img src="inatel.jpg" alt="Inatel" class="partner-logo">
+                    
+                    <!-- Novo Acordo adicionado com Regime Livre em tamanho pequeno (~13px) -->
+                    <div class="flex flex-col items-center">
+                        <img src="image-removebg-preview (1).png" alt="Seguro de Saúde" class="partner-logo">
+                        <span class="text-[13px] text-slate-500 font-medium mt-1">Regime Livre</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Acordos -->
-        <section id="acordos" class="py-16 bg-slate-50 border-t border-slate-200/60">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <span class="text-slate-400 text-xs font-bold uppercase tracking-wider block mb-8">Acordos e Parcerias de Saúde</span>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    <img src="MÉDIS.png" alt="Médis" class="h-10 partner-logo object-contain">
-                    <img src="imagem_2026-03-28_224333470.png" alt="Multicare" class="h-10 partner-logo object-contain">
-                    <img src="imagem_2026-03-29_094654969.png" alt="AdvanceCare" class="h-10 partner-logo object-contain">
-                    <img src="imagem_2026-03-29_094744485.png" alt="Allianz" class="h-10 partner-logo object-contain">
-                    <img src="imagem_2026-03-29_100157489.png" alt="SAMS" class="h-10 partner-logo object-contain">
-                    <img src="sad-gnr-margem-sul.png" alt="SAD GNR" class="h-10 partner-logo object-contain">
-                    <img src="montepio.png" alt="Montepio" class="h-10 partner-logo object-contain">
-                    <img src="imagem_2026-03-28_224622784.png" alt="RNA" class="h-10 partner-logo object-contain">
-                    <img src="inatel.jpg" alt="Inatel" class="h-8 partner-logo object-contain">
+        <!-- SECÇÃO INSTAGRAM EMBED & PERFIL -->
+        <section class="py-16 bg-white border-b border-slate-100">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="mb-8">
+                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Redes Sociais</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Siga-nos no Instagram</h2>
+                    <a href="https://www.instagram.com/clinica_dentamedi/" target="_blank" class="text-sky-600 font-semibold text-sm hover:underline inline-flex items-center gap-1.5 mt-2">
+                        <i class="fa-brands fa-instagram text-lg"></i> @clinica_dentamedi
+                    </a>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="w-full max-w-[400px] border border-slate-200 rounded-2xl overflow-hidden shadow-md">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DV_OTAiiJNc/?img_index=1" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contactos e Agendamento -->
-        <section id="contactos" class="py-20 bg-white">
+        <!-- PERGUNTAS FREQUENTES (FAQ) - OTIMIZAÇÃO SEO -->
+        <section id="faq" class="py-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Esclarecimento de Dúvidas</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Perguntas Frequentes</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm group">
+                        <summary class="font-bold text-slate-900 cursor-pointer flex justify-between items-center text-base">
+                            <span>Onde se localizam as clínicas Dentamedi?</span>
+                            <i class="fa-solid fa-plus text-sky-600 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                            Dispomos de duas clínicas no distrito de Vila Real: na Avenida da Noruega, 314 em Vila Real, e na Rua de Trás, 1 em Sabrosa.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm group">
+                        <summary class="font-bold text-slate-900 cursor-pointer flex justify-between items-center text-base">
+                            <span>Como funciona o agendamento de consultas?</span>
+                            <i class="fa-solid fa-plus text-sky-600 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                            Pode submeter o formulário online nesta página ou entrar em contacto por chamada telefónica diretamente para a clínica pretendida.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm group">
+                        <summary class="font-bold text-slate-900 cursor-pointer flex justify-between items-center text-base">
+                            <span>Posso utilizar o meu seguro de saúde?</span>
+                            <i class="fa-solid fa-plus text-sky-600 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                            Sim. Temos acordos com as principais seguradoras (Médis, Multicare, AdvanceCare, Allianz, SAMS, GNR, Montepio, RNA e Inatel), além de podermos emitir documentação para o Regime Livre.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Contactos -->
+        <section id="contactos" class="py-20 bg-white border-t border-slate-100">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     
-                    <!-- Informações e Localizações -->
                     <div class="lg:col-span-5 space-y-8">
                         <div>
                             <span class="text-sky-600 text-xs font-bold tracking-wider uppercase">Contactos</span>
                             <h2 class="text-3xl font-extrabold text-slate-900 mt-1">As nossas clínicas</h2>
-                            <p class="text-slate-500 text-sm mt-2">Escolha a localização mais conveniente para o seu atendimento.</p>
                         </div>
 
                         <div class="space-y-6">
@@ -303,10 +459,9 @@
                         </div>
                     </div>
 
-                    <!-- Formulário Limpo e Direto (Sem "O que pretende na consulta") -->
                     <div class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Marcar Consulta</h3>
-                        <p class="text-slate-500 text-sm mb-6">Deixe o seu contacto. Entraremos em contacto brevemente para confirmar o seu agendamento.</p>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Formulário de Agendamento</h3>
+                        <p class="text-slate-500 text-sm mb-6">Preencha os seus dados para entrarmos em contacto.</p>
 
                         <form action="https://formspree.io/f/xvggleld" method="POST" class="space-y-4">
                             <div>
@@ -336,7 +491,14 @@
 
                             <div>
                                 <label class="block text-xs font-semibold text-slate-700 mb-1">Mensagem ou Preferência de Horário</label>
-                                <textarea name="message" rows="3" placeholder="Indique a sua preferência de dia ou horário..." class="w-full p-3.5 bg-white border border-slate-200 rounded-xl outline-none focus:border-sky-500 text-sm text-slate-800 resize-none"></textarea>
+                                <textarea id="formMessage" name="message" rows="3" placeholder="Indique a sua preferência de dia ou horário..." class="w-full p-3.5 bg-white border border-slate-200 rounded-xl outline-none focus:border-sky-500 text-sm text-slate-800 resize-none"></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-2 pt-2">
+                                <input type="checkbox" id="terms" required class="mt-1 rounded text-sky-600 focus:ring-sky-500">
+                                <label for="terms" class="text-xs text-slate-600">
+                                    Aceito os <a href="#termosModal" onclick="openTerms()" class="text-sky-600 underline">Termos e Condições</a> e a Política de Privacidade.
+                                </label>
                             </div>
 
                             <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold text-sm shadow-md">
@@ -351,17 +513,38 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-xs">
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-xs">
         <div class="max-w-6xl mx-auto px-6 space-y-4">
             <div class="flex justify-center gap-6 text-lg text-slate-300">
                 <a href="https://www.facebook.com/dentamedi" target="_blank" aria-label="Facebook" class="hover:text-sky-400"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/clinica_dentamedi/" target="_blank" aria-label="Instagram" class="hover:text-pink-400"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p>© 2026 Dentamedi — Clínica Dentária. Todos os direitos reservados.</p>
+            <p class="text-[11px] text-slate-500">
+                <button onclick="openTerms()" class="hover:underline">Termos e Condições</button> | <button onclick="openTerms()" class="hover:underline">Política de Privacidade</button>
+            </p>
         </div>
     </footer>
 
-    <!-- WhatsApp Flutuante -->
+    <!-- MODAL DE TERMOS E CONDIÇÕES -->
+    <div id="termsModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[2000] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 space-y-4 text-left shadow-2xl">
+            <div class="flex justify-between items-center border-b pb-4">
+                <h3 class="text-lg font-bold text-slate-900">Termos e Condições & Privacidade</h3>
+                <button onclick="closeTerms()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+                <p><strong>1. Tratamento de Dados:</strong> Os dados facultados nos formulários destinam-se exclusivamente ao agendamento e contacto prévio por parte da equipa da Dentamedi.</p>
+                <p><strong>2. Proteção de Dados (RGPD):</strong> A Dentamedi compromete-se a garantir a privacidade e confidencialidade dos dados pessoais transmitidos, não os cedendo a terceiros.</p>
+                <p><strong>3. Consultas e Avaliações:</strong> As informações recolhidas através dos testes online constituem uma pré-avaliação informativa e não substituem uma consulta de diagnóstico presencial.</p>
+            </div>
+            <div class="pt-4 border-t text-right">
+                <button onclick="closeTerms()" class="bg-slate-900 text-white px-6 py-2 rounded-xl text-xs font-bold">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante de WhatsApp -->
     <a href="https://wa.me/351259348915?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Dentamedi." 
        target="_blank" 
        class="fixed bottom-6 left-6 bg-emerald-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-xl z-50 hover:scale-105 transition-all" 
@@ -389,6 +572,51 @@
     </div>
 
     <script>
+        // Rotação da imagem de fundo do Hero a cada 8 segundos
+        const heroImages = [
+            "imagem_2026-03-28_230235171.png",
+            "Black and White Modern Dental Care Presentation.png",
+            "imagem_2026-03-29_104544504.png"
+        ];
+        let heroIndex = 0;
+        const heroSection = document.getElementById('heroSlider');
+
+        setInterval(() => {
+            heroIndex = (heroIndex + 1) % heroImages.length;
+            heroSection.style.backgroundImage = `linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%), url('${heroImages[heroIndex]}')`;
+        }, 8000);
+
+        // Lógica do Quiz dos Alinhadores (4 Perguntas)
+        const quizAnswers = {};
+
+        function answerQ(questionNumber, answer) {
+            quizAnswers[`q${questionNumber}`] = answer;
+            document.getElementById(`q${questionNumber}`).classList.add('hidden');
+            
+            if (questionNumber < 4) {
+                document.getElementById(`q${questionNumber + 1}`).classList.remove('hidden');
+            } else {
+                document.getElementById('quizResult').classList.remove('hidden');
+            }
+        }
+
+        function scrollToContactForm() {
+            const msgBox = document.getElementById('formMessage');
+            if (msgBox) {
+                msgBox.value = `[Respostas do Teste de Alinhadores: Q1=${quizAnswers.q1 || '-'}, Q2=${quizAnswers.q2 || '-'}, Q3=${quizAnswers.q3 || '-'}, Q4=${quizAnswers.q4 || '-'}] Pretendo agendar avaliação.`;
+            }
+            document.getElementById('contactos').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Modais de Termos e Condições
+        function openTerms() {
+            document.getElementById('termsModal').classList.remove('hidden');
+        }
+        function closeTerms() {
+            document.getElementById('termsModal').classList.add('hidden');
+        }
+
+        // Chatbot Functionality
         function toggleChat() {
             document.getElementById('chatWindow').classList.toggle('chat-open');
         }
@@ -405,7 +633,7 @@
             
             if(text.includes('horário') || text.includes('aberto')) reply = "Estamos abertos de Segunda a Sexta, das 09h00 às 18h00.";
             else if(text.includes('onde') || text.includes('morada')) reply = "Temos clínicas em Vila Real (Av. Noruega, 314) e Sabrosa (Rua de Trás, 1).";
-            else if(text.includes('acordo') || text.includes('seguro')) reply = "Temos acordos com Médis, Multicare, AdvanceCare, Allianz, SAMS, GNR, Montepio e Inatel.";
+            else if(text.includes('acordo') || text.includes('seguro')) reply = "Aceitamos Médis, Multicare, AdvanceCare, Allianz, SAMS, GNR, Montepio, RNA, Inatel e Regime Livre.";
 
             setTimeout(() => {
                 content.innerHTML += `<div class="bg-white p-2.5 rounded-xl border border-slate-100 shadow-sm w-fit max-w-[85%]">${reply}</div>`;
@@ -413,18 +641,6 @@
             }, 500);
 
             input.value = "";
-        }
-
-        function nextAlignerQ(step) {
-            if(step === 1) {
-                document.getElementById('alignerQ1').classList.add('hidden');
-                document.getElementById('alignerQ2').classList.remove('hidden');
-            }
-        }
-
-        function showAlignerResult() {
-            document.getElementById('alignerQ2').classList.add('hidden');
-            document.getElementById('alignerResult').classList.remove('hidden');
         }
     </script>
 </body>
